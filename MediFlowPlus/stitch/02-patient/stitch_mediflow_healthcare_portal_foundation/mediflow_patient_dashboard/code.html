@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<title>Home - MediFlow+ Citizen Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { width: 100vw; margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#bdc9c4",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#c9e7f4",
+            "on-error-container": "#93000a",
+            "surface-container": "#d9f2fd",
+            "on-primary-fixed": "#00201a",
+            "tertiary-container": "#0073ae",
+            "surface-container-highest": "#cee6f1",
+            "outline": "#6e7a75",
+            "on-tertiary-container": "#e7f2ff",
+            "tertiary-fixed": "#cce5ff",
+            "inverse-primary": "#7bd7c1",
+            "primary-fixed-dim": "#7bd7c1",
+            "surface-bright": "#f2fbff",
+            "on-primary-container": "#b3ffeb",
+            "surface": "#f2fbff",
+            "on-primary-fixed-variant": "#005144",
+            "on-secondary-fixed-variant": "#2f4b55",
+            "inverse-on-surface": "#ddf5ff",
+            "inverse-surface": "#1d333c",
+            "on-background": "#061e26",
+            "primary": "#006051",
+            "on-error": "#ffffff",
+            "secondary-container": "#c7e4f2",
+            "surface-dim": "#c6dee8",
+            "surface-tint": "#006b5b",
+            "surface-variant": "#cee6f1",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#4b6772",
+            "error-container": "#ffdad6",
+            "tertiary": "#005a89",
+            "secondary": "#47626e",
+            "surface-container-low": "#e4f7ff",
+            "background": "#f2fbff",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#3e4946",
+            "on-tertiary-fixed": "#001d31",
+            "surface-container-high": "#d4ecf7",
+            "primary-fixed": "#98f4dd",
+            "on-secondary-fixed": "#001f28",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#93ccff",
+            "primary-container": "#0b7b69",
+            "on-tertiary-fixed-variant": "#004b73",
+            "secondary-fixed-dim": "#aecbd8",
+            "on-surface": "#061e26"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-desktop": "2rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-xl": "2rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "gutter": "1rem",
+            "gutter-desktop": "1.5rem"
+          },
+          "fontFamily": {
+            "display-lg-mobile": ["Noto Sans"],
+            "label-lg": ["Noto Sans"],
+            "headline-md": ["Noto Sans"],
+            "headline-sm": ["Noto Sans"],
+            "display-lg": ["Noto Sans"],
+            "body-sm": ["Noto Sans"],
+            "body-md": ["Noto Sans"],
+            "body-lg": ["Noto Sans"],
+            "label-md": ["Noto Sans"],
+            "label-sm": ["Noto Sans"],
+            "headline-lg": ["Noto Sans"]
+          },
+          "fontSize": {
+            "display-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
+<div class="h-20 px-margin flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0 flex-1">
+<img alt="MediFlow+ Brand Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VfXbYSMuLAlFGrlisKJpDCWISyS7Eh6XQFMJE6VlXjrV4vBCiJU0c42xXk3Q1nsXaXtjUMvp0ScFvyn9oHeWih8GSr5hCJDdKIo0oigqQctgUR4D2WHDrx-LdNKlyn1LWbfgGNN3cu-Cm65XKvJyegzrf31XM5uG7NiDWdUf8cKlOctXQiGbM2NFPO-dL_PnpfsN2QGmMFxQjTpJA8LojLrc_OkOsrh_wRjPg6CWHAo41vu2vY80no"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-primary truncate leading-tight">MediFlow+</span>
+<span class="font-label-sm text-[10px] text-primary-container bg-surface-container-high px-space-xs py-0.5 rounded-full font-bold uppercase tracking-wider shrink-0">Citizen</span>
+</div>
+<div class="flex items-center gap-1 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[14px] shrink-0">home_pin</span>
+<span class="font-label-sm text-label-sm text-secondary truncate tracking-tight">Home: Asoda PHC (प्रा.आ. केंद्र असोदा)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<div class="flex items-center bg-surface-container-low rounded-full p-0.5 shadow-[0_1px_4px_rgba(0,0,0,0.03)]">
+<button class="min-h-[44px] min-w-[44px] px-2 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-primary shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex items-center justify-center transition-colors" type="button">EN</button>
+<button class="min-h-[44px] min-w-[44px] px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" type="button">मरा</button>
+<button class="min-h-[44px] min-w-[44px] px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" type="button">हिं</button>
+</div>
+<a class="relative min-h-[44px] min-w-[44px] w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors rounded-full" data-path="notifications" href="#">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="absolute top-2 right-2 flex items-center justify-center min-w-[18px] h-[18px] px-1 font-label-sm text-[10px] rounded-full bg-error text-on-error font-bold leading-none ring-2 ring-surface">2</span>
+</a>
+<a class="relative min-h-[44px] min-w-[44px] w-11 h-11 flex items-center justify-center rounded-full shrink-0" data-path="profile" href="#">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+</a>
+</div>
+</div>
+</header>
+<main class="flex flex-col relative w-full pt-20 pb-36 px-margin bg-surface">
+<div class="flex flex-col w-full gap-space-md">
+<!-- Patient Greeting & Home PHC Hero Banner -->
+<section class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-36 h-36 rounded-full bg-primary-fixed/20 pointer-events-none blur-xl"></div>
+<div class="flex items-start justify-between gap-space-sm z-10">
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">ABHA Verified • आभा जोडलेले</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">
+          सस्नेह नमस्कार, <br/>
+<span class="text-primary font-bold">Ramesh V. Patil</span>
+</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Patient ID: <span class="font-label-md text-label-md text-on-surface font-semibold">PAT-MH-4290</span>
+</p>
+</div>
+<div class="shrink-0 relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm bg-surface-container-high" data-alt="Warm documentary portrait of a 52 year old rural Indian gentleman wearing clean cotton shirt and subtle welcoming smile, high fidelity, soft daylight, authentic citizen profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYu8OVaatLXAhHPpwAYi0CC3NoIWil9pZkUjB244cuh0oQ2OIkJz-wb0DVreXKSbZ8smaBQVpp7RiTsqwnp-ckZwEWU8CBizEBu4-oTfTAAEEsIZDOJmVGgyFO4zloHCTe4JzYqmb9lMWwmYYmtqqb0if84hRq5YuNqEMQuOwcaN-8PqfUIU-94VSGgSnzyJYyFETlcGg-TGkPQIZDwXrd6uQFUEMMzgZCnZJNrkA_yCNYPXEGMg"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+</div>
+<!-- Home PHC Location Strip -->
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs bg-surface-container-low p-2.5 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary">
+<span class="material-symbols-outlined text-[18px]">local_hospital</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Primary Health Facility</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate leading-tight">
+          Asoda PHC (प्रा.आ. केंद्र असोदा)
+        </span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Jalgaon Taluka • जळगाव जिल्हा</span>
+</div>
+<button aria-label="Change Home PHC" class="min-h-[44px] min-w-[44px] p-2 flex items-center justify-center text-primary hover:bg-surface-container-high rounded-full transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</button>
+</div>
+</section>
+<!-- High-Priority Upcoming Appointment Card -->
+<section class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative">
+<div class="flex items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">event_upcoming</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Upcoming Consultation</h2>
+</div>
+<span class="inline-flex items-center gap-1 bg-surface-container text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        CONFIRMED • निश्चित
+      </span>
+</div>
+<div class="mt-2 bg-gradient-to-br from-surface-container-low via-surface-container-lowest to-surface-container-low p-space-sm rounded-lg flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">General OPD (सामान्य तपासणी)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">stethoscope</span>
+            Dr. Anita Kulkarni (Medical Officer)
+          </p>
+</div>
+<div class="text-right bg-surface-container-lowest px-2 py-1 rounded-md shadow-xs shrink-0">
+<span class="font-label-sm text-[10px] text-secondary uppercase block">OPD Token</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">#14</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs mt-1 pt-2 bg-surface-container-lowest/60 rounded-md p-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center shrink-0 text-on-secondary-container">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[10px] text-secondary">Date &amp; Time</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Tomorrow, 10:30 AM</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant -mt-0.5">२४ ऑक्टोबर</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center shrink-0 text-on-secondary-container">
+<span class="material-symbols-outlined text-[15px]">meeting_room</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[10px] text-secondary">Consultation Room</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Room 2 (Dispensary)</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant -mt-0.5">कक्ष क्र. २</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Appointment Actions -->
+<div class="mt-space-md grid grid-cols-2 gap-space-xs">
+<button class="min-h-[48px] px-space-md bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>View Slip • पावती</span>
+</button>
+<button class="min-h-[48px] px-space-md bg-surface-container-high hover:bg-surface-container text-on-surface rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_clock</span>
+<span>Reschedule</span>
+</button>
+</div>
+</section>
+<!-- 4 Essential Touch-Friendly Quick Actions (2x2 Grid) -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-0.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Quick Actions • जलद सेवा</h2>
+<span class="font-label-sm text-label-sm text-secondary">Select to proceed</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Book Appointment -->
+<a class="min-h-[96px] bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col justify-between transition-all group active:scale-[0.98]" href="#">
+<div class="flex items-center justify-between w-full">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[22px]">edit_calendar</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-0.5 transition-transform text-[18px]">arrow_forward</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Book Visit</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">नवी भेट बुक करा</span>
+</div>
+</a>
+<!-- Find Nearby PHC -->
+<a class="min-h-[96px] bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col justify-between transition-all group active:scale-[0.98]" href="#">
+<div class="flex items-center justify-between w-full">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">share_location</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-0.5 transition-transform text-[18px]">arrow_forward</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Find PHC</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">जवळचे केंद्र शोधा</span>
+</div>
+</a>
+<!-- Check Medicine Stock -->
+<a class="min-h-[96px] bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col justify-between transition-all group active:scale-[0.98]" href="#">
+<div class="flex items-center justify-between w-full">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">medication_liquid</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-0.5 transition-transform text-[18px]">arrow_forward</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Check Stock</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">औषध उपलब्धता</span>
+</div>
+</a>
+<!-- My Health Records -->
+<a class="min-h-[96px] bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm flex flex-col justify-between transition-all group active:scale-[0.98]" href="#">
+<div class="flex items-center justify-between w-full">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">history_edu</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-0.5 transition-transform text-[18px]">arrow_forward</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold leading-tight">Health History</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">मागील आरोग्य नोंदी</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Medicine Request & Refill Live Tracker -->
+<section class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between gap-space-xs mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">vaccines</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Prescription Refill Track</h2>
+</div>
+<span class="inline-flex items-center gap-1 bg-primary-fixed/60 text-on-primary-fixed-variant font-label-sm text-label-sm px-2.5 py-0.5 rounded-full font-bold">
+        READY • तयार
+      </span>
+</div>
+<!-- Medicine Item Details -->
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<div class="w-11 h-11 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs shrink-0">
+<span class="material-symbols-outlined text-[24px]">pill</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Metformin 500mg + Amlodipine 5mg</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Qty: 60 Tablets (30 Days Course) • ३० दिवसांचा डोस</span>
+<div class="mt-2 flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[15px]">counter_1</span>
+<span>Dispense Counter 1, Asoda PHC</span>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-[11px] text-on-surface-variant mt-0.5">
+<span class="material-symbols-outlined text-[13px] text-primary">alarm</span>
+<span>Pickup valid till: 26 Oct (04:00 PM)</span>
+</div>
+</div>
+</div>
+<!-- Progress Step Mini Indicator -->
+<div class="mt-space-sm flex items-center justify-between px-1">
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary flex items-center justify-center">
+<span class="w-1 h-1 rounded-full bg-on-primary"></span>
+</span>
+<span class="font-label-sm text-[11px] text-on-surface font-semibold">Prescribed</span>
+</div>
+<div class="h-0.5 flex-1 mx-2 bg-primary"></div>
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary flex items-center justify-center">
+<span class="w-1 h-1 rounded-full bg-on-primary"></span>
+</span>
+<span class="font-label-sm text-[11px] text-on-surface font-semibold">Packed</span>
+</div>
+<div class="h-0.5 flex-1 mx-2 bg-primary"></div>
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-[11px] text-primary font-bold">Ready</span>
+</div>
+</div>
+<button class="mt-space-md min-h-[48px] w-full bg-surface-container-high hover:bg-surface-container text-on-surface font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+<span>Show Pharmacy Token #MED-8832</span>
+</button>
+</section>
+<!-- PHC Live Operational Status & Doctor on Duty -->
+<section class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">monitor_heart</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Centre Live Telemetry</h2>
+</div>
+<span class="font-label-sm text-[11px] text-secondary">Updated 5 min ago</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[10px] text-secondary uppercase font-bold">Current OPD Wait</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">~15 Min</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">Low crowd level</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[20px]">ac_unit</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[10px] text-secondary uppercase font-bold">Cold Chain Stock</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">+3.8°C</span>
+<span class="font-body-sm text-[10px] text-primary font-medium">Optimal • सुरक्षित</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Care Activity & Community Announcements -->
+<section class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">campaign</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Alerts &amp; Activity • सूचना</h2>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1 -->
+<div class="flex items-start gap-space-sm pb-space-sm border-b-0 bg-surface-container-low/40 p-2.5 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Appointment Slot Confirmed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">General OPD consultation confirmed for 24 Oct, Asoda PHC.</span>
+<span class="font-label-sm text-[10px] text-secondary mt-1">2 hours ago • २ तासांपूर्वी</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-space-sm pb-space-sm bg-surface-container-low/40 p-2.5 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Paracetamol 500mg Restocked</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Essential fever medication batch verified and ready at Dispensary counter.</span>
+<span class="font-label-sm text-[10px] text-secondary mt-1">Yesterday • काल</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-space-sm bg-surface-container-low/40 p-2.5 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">health_and_safety</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Mission Indradhanush Immunization Drive</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Universal child &amp; maternal booster camp scheduled this Saturday across Asoda cluster.</span>
+<span class="font-label-sm text-[10px] text-secondary mt-1">3 days ago • ३ दिवसांपूर्वी</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Local Emergency Support Dial Card -->
+<section class="bg-surface-container p-space-md rounded-xl shadow-xs flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-error shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[22px]">e911_emergency</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Ambulance Emergency</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Government Dial 108 / 102 Helpline</span>
+</div>
+</div>
+<a class="min-h-[44px] px-3.5 bg-surface-container-lowest hover:bg-surface-bright text-error font-label-md text-label-md rounded-lg flex items-center justify-center gap-1 shadow-xs shrink-0 font-bold" href="tel:108">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>108</span>
+</a>
+</section>
+</div>
+<aside class="mt-space-xl p-space-md rounded-xl bg-surface-container-low text-on-surface-variant flex flex-col gap-1 text-center shadow-[0_1px_3px_rgba(0,0,0,0.03)]">
+<div class="flex items-center justify-center gap-1.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>शासकीय आरोग्य सेवा हमी / Official Public Healthcare Assurance</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary/90 leading-relaxed">
+        All medical consultations, generic pharmaceuticals, and essential diagnostics provided under the National Health Mission at registered Primary Health Centres are complimentary and subject to statutory clinical protocol verification.
+      </p>
+</aside>
+</main>
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-label-md">
+<div class="h-16 px-space-xs flex items-center justify-around">
+<a aria-current="page" class="min-h-[44px] min-w-[44px] flex flex-col items-center justify-center gap-0.5 flex-1 transition-colors py-1 text-primary font-label-md" data-path="home" href="#">
+<span class="material-symbols-outlined text-[22px]">home</span>
+<span class="font-label-sm text-label-sm text-center truncate w-full">Home</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80 -mt-1 leading-tight">मुख्य</span>
+</a>
+<a class="min-h-[44px] min-w-[44px] flex flex-col items-center justify-center gap-0.5 flex-1 text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="appointments" href="#">
+<span class="material-symbols-outlined text-[22px]">calendar_month</span>
+<span class="font-label-sm text-label-sm text-center truncate w-full">Appointments</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80 -mt-1 leading-tight">भेटी</span>
+</a>
+<a class="min-h-[44px] min-w-[44px] flex flex-col items-center justify-center gap-0.5 flex-1 text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="find-phc" href="#">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+<span class="font-label-sm text-label-sm text-center truncate w-full">Find PHC</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80 -mt-1 leading-tight">केंद्र शोधा</span>
+</a>
+<a class="min-h-[44px] min-w-[44px] flex flex-col items-center justify-center gap-0.5 flex-1 text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="medicines" href="#">
+<span class="material-symbols-outlined text-[22px]">medication</span>
+<span class="font-label-sm text-label-sm text-center truncate w-full">Medicines</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80 -mt-1 leading-tight">औषध</span>
+</a>
+<a class="min-h-[44px] min-w-[44px] flex flex-col items-center justify-center gap-0.5 flex-1 text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="profile" href="#">
+<span class="material-symbols-outlined text-[22px]">account_circle</span>
+<span class="font-label-sm text-label-sm text-center truncate w-full">Profile</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80 -mt-1 leading-tight">प्रोफाईल</span>
+</a>
+</div>
+</nav>
+</body></html>

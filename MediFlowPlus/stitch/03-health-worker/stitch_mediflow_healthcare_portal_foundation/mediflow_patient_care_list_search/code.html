@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface': '#f2fbff', 'on-tertiary-container': '#e7f2ff', 'primary-fixed-dim': '#7bd7c1', 'tertiary': '#005a89', 'secondary-fixed-dim': '#aecbd8', 'on-primary-fixed': '#00201a', 'on-tertiary-fixed-variant': '#004b73', 'inverse-primary': '#7bd7c1', 'surface-container-low': '#e4f7ff', 'surface-container-high': '#d4ecf7', 'error': '#ba1a1a', 'surface-container': '#d9f2fd', 'inverse-surface': '#1d333c', 'background': '#f2fbff', 'on-secondary-fixed-variant': '#2f4b55', 'secondary': '#47626e', 'on-primary': '#ffffff', 'tertiary-container': '#0073ae', 'primary': '#006051', 'on-secondary': '#ffffff', 'primary-fixed': '#98f4dd', 'primary-container': '#0b7b69', 'inverse-on-surface': '#ddf5ff', 'on-error-container': '#93000a', 'secondary-fixed': '#c9e7f4', 'on-secondary-fixed': '#001f28', 'outline': '#6e7a75', 'tertiary-fixed': '#cce5ff', 'on-primary-container': '#b3ffeb', 'surface-tint': '#006b5b', 'on-background': '#061e26', 'outline-variant': '#bdc9c4', 'surface-variant': '#cee6f1', 'on-secondary-container': '#4b6772', 'error-container': '#ffdad6', 'on-surface-variant': '#3e4946', 'surface-container-highest': '#cee6f1', 'on-error': '#ffffff', 'on-tertiary-fixed': '#001d31', 'surface-bright': '#f2fbff', 'on-surface': '#061e26', 'surface-container-lowest': '#ffffff', 'on-primary-fixed-variant': '#005144', 'secondary-container': '#c7e4f2', 'on-tertiary': '#ffffff', 'tertiary-fixed-dim': '#93ccff', 'surface-dim': '#c6dee8' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'gutter': '1rem', 'margin': '1rem', 'space-sm': '0.5rem', 'margin-desktop': '2rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'space-xl': '2rem', 'space-md': '1rem', 'gutter-desktop': '1.5rem' }, fontFamily: { 'display-lg': ['Noto Sans'], 'body-md': ['Noto Sans'], 'label-sm': ['Noto Sans'], 'label-lg': ['Noto Sans'], 'headline-md': ['Noto Sans'], 'body-lg': ['Noto Sans'], 'headline-sm': ['Noto Sans'], 'body-sm': ['Noto Sans'], 'headline-lg': ['Noto Sans'], 'display-lg-mobile': ['Noto Sans'], 'label-md': ['Noto Sans'] }, fontSize: { 'display-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-md': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'body-lg': ['16px', { lineHeight: '26px', fontWeight: '400' }], 'headline-sm': ['18px', { lineHeight: '26px', fontWeight: '600' }], 'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }], 'headline-lg': ['24px', { lineHeight: '32px', letterSpacing: '-0.01em', fontWeight: '600' }], 'display-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '700' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="Brand logo. - Primary color: #0b7b69 - Font: notoSans - Mode: light - Roundness: rounded-sm" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VfXbYSMuLAlFGrlisKJpDCWISyS7Eh6XQFMJE6VlXjrV4vBCiJU0c42xXk3Q1nsXaXtjUMvp0ScFvyn9oHeWih8GSr5hCJDdKIo0oigqQctgUR4D2WHDrx-LdNKlyn1LWbfgGNN3cu-Cm65XKvJyegzrf31XM5uG7NiDWdUf8cKlOctXQiGbM2NFPO-dL_PnpfsN2QGmMFxQjTpJA8LojLrc_OkOsrh_wRjPg6CWHAo41vu2vY80no"/><div class="flex flex-col min-w-0 justify-center"><div class="flex items-center gap-space-xs"><span class="font-label-lg text-label-lg font-bold text-on-surface truncate">MediFlow+</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed shrink-0 hidden xs:inline-block">Jalgaon PHC</span></div><div class="flex items-center gap-1"><span class="font-label-sm text-label-sm text-primary-container truncate font-semibold">ASO-PHC • Patients</span><span class="font-label-sm text-label-sm px-1 py-0.2 rounded bg-primary/10 text-primary uppercase font-bold shrink-0 text-[10px] leading-tight">HW / सेवक</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="flex items-center bg-surface-container-low p-0.5 rounded-full text-on-secondary-container"><button aria-label="Switch language to English" class="min-h-[44px] min-w-[44px] px-2 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-primary font-bold shadow-[0_1px_3px_rgba(15,45,55,0.05)] flex items-center justify-center" type="button">EN</button><button aria-label="मराठी भाषा निवडा" class="min-h-[44px] min-w-[44px] px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center justify-center" type="button">मरा</button><button aria-label="हिन्दी भाषा चुनें" class="min-h-[44px] min-w-[44px] px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center justify-center" type="button">हिं</button></div><button aria-label="View notifications" class="min-h-[44px] min-w-[44px] relative flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-error px-1 font-label-sm text-[10px] text-on-error font-bold leading-none">3</span></button><div class="flex items-center gap-1 pl-1 shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm"><span class="material-symbols-outlined text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-sm text-label-sm font-bold text-on-surface leading-tight">S. Patil</span><span class="font-label-sm text-label-sm text-outline leading-tight text-[10px]">ANM-001</span></div></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Status & Beat Overview Strip -->
+<div class="px-margin pt-space-sm pb-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">रुग्ण शोध व सेवा यादी</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Asoda Primary Health Care Roster</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container rounded-full shrink-0">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-bold text-primary">Live Beat</span>
+</div>
+</div>
+<!-- Search & Jurisdiction Controls -->
+<div class="px-margin py-space-sm flex flex-col gap-space-sm">
+<!-- Live Search Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input aria-label="Search Patient by name, ABHA ID or Patient ID" class="w-full h-12 pl-10 pr-10 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm transition-all focus:outline-none focus:bg-surface-container-lowest focus:shadow-md" id="patientSearchInput" inputmode="search" placeholder="शोध: नाव, ABHA ID (उदा. PAT-MH-4290)..." type="search"/>
+<button aria-label="Clear search query" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface min-w-[44px] min-h-[44px] justify-center" id="clearSearchBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Cluster Jurisdiction Dropdown Bar -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest p-1.5 rounded-xl shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div class="flex-1 min-w-0 pr-1">
+<label class="block font-label-sm text-[10px] text-secondary font-bold uppercase tracking-wider leading-none" for="clusterSelect">कार्यक्षेत्र / Sub-Center Cluster</label>
+<select class="w-full bg-transparent font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none cursor-pointer py-0.5" id="clusterSelect">
+<option value="all">सर्व गावे (All Clusters • 38)</option>
+<option value="gaothan">Asoda Gaothan (असोडा गावठाण)</option>
+<option value="kusumba">Kusumba Wadi (कुसुंबा वाडी)</option>
+<option value="neri">Neri Border Sector (नेरी सीमा)</option>
+</select>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 pointer-events-none pr-1">expand_more</span>
+</div>
+<!-- Horizontal Category Filter Pills -->
+<div aria-label="Patient categories" class="flex items-center gap-2 overflow-x-auto py-1 no-scrollbar -mx-margin px-margin" role="tablist">
+<button aria-selected="true" class="filter-chip min-h-[44px] px-3.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center gap-1.5 shrink-0 shadow-sm transition-transform active:scale-95" data-filter="all" role="tab" type="button">
+<span>सर्व रुग्ण (All)</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-[10px]">38</span>
+</button>
+<button aria-selected="false" class="filter-chip min-h-[44px] px-3.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold flex items-center gap-1.5 shrink-0 shadow-sm transition-transform active:scale-95" data-filter="today" role="tab" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">calendar_today</span>
+<span>आजच्या भेटी (Today)</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px]">12</span>
+</button>
+<button aria-selected="false" class="filter-chip min-h-[44px] px-3.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold flex items-center gap-1.5 shrink-0 shadow-sm transition-transform active:scale-95" data-filter="ncd" role="tab" type="button">
+<span class="material-symbols-outlined text-[16px] text-error">monitor_heart</span>
+<span>दीर्घ आजार (NCD)</span>
+<span class="px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px]">16</span>
+</button>
+<button aria-selected="false" class="filter-chip min-h-[44px] px-3.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold flex items-center gap-1.5 shrink-0 shadow-sm transition-transform active:scale-95" data-filter="anc" role="tab" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">pregnant_woman</span>
+<span>मातृ सुरक्षा (ANC)</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[10px]">8</span>
+</button>
+<button aria-selected="false" class="filter-chip min-h-[44px] px-3.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold flex items-center gap-1.5 shrink-0 shadow-sm transition-transform active:scale-95" data-filter="refill" role="tab" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">pill</span>
+<span>औषध वाटप (Refill)</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px]">5</span>
+</button>
+</div>
+</div>
+<!-- Beat Results Counter & Quick Sort -->
+<div class="px-margin pt-space-xs pb-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold" id="resultsCountNotice">
+      Showing <strong class="text-on-surface">3</strong> of 38 assigned patients in your active beat
+    </span>
+<button class="min-h-[44px] px-2 flex items-center gap-1 text-primary hover:text-primary-container font-label-sm text-label-sm font-bold" id="toggleSortOrder" type="button">
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+<span>वेळेनुसार क्रम</span>
+</button>
+</div>
+<!-- Patient Cards Roster (Mobile Stacked Layout) -->
+<div class="px-margin flex flex-col gap-space-md" id="patientListContainer">
+<!-- Card 1: Ramesh Vithal Patil (OPD Arrived / NCD) -->
+<article class="patient-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm" data-category="today ncd" data-query="ramesh vithal patil pat-mh-4290 91-4402-8819-2041 diabetes asoda" data-village="gaothan">
+<!-- Card Header: Profile Photo + Primary Identity -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-13 h-13 rounded-full object-cover shadow-inner bg-surface-container" data-alt="Elderly Indian man in his fifties with gentle demeanor and warm smile, wearing rural cotton shirt, natural morning lighting in Jalgaon primary clinic setting, authentic documentary portrait" height="52" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUTYFYzLih5UntXuvo6C10gg1eoME70t8O63NkC-_0Hw5DPpW9-DmFxBNpnhksUa4xv2cy4OcB1s-HkppMELzRGDM0JatKR_nhb5n34HqTeMp3RXN8xzOwVmSjNTn64gIpSy1TA4AazXV6v6L3aKOaJfD4iqkzm6eWmK5ZkSYPMH8KBrFNlHzdzraH1UhXzMz04K-Mu5eLmEXUN5RZeSybNuA6L4ka2IuOMC8Tz_RdJlAGr8dpXw" width="52"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary text-[10px] font-bold shadow-sm" title="Biometric ABHA Verified">
+              ✓
+            </span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Ramesh V. Patil</h2>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full bg-surface-container text-secondary font-medium">वय ५२ वर्षे • पु</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">PAT-MH-4290</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">fingerprint</span>
+<span class="font-label-sm text-[11px] text-tertiary font-mono">ABHA: 91-4402-8819-2041</span>
+</div>
+</div>
+</div>
+<!-- Token Badge -->
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-[10px] text-secondary uppercase font-bold tracking-tight">OPD टोकन</span>
+<span class="font-display-lg-mobile text-[22px] font-bold text-primary leading-tight">#14</span>
+</div>
+</div>
+<!-- Vital Location & Status Ribbon -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between gap-2 flex-wrap">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">cottage</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Asoda Bk., Sector 2</span>
+<span class="font-label-sm text-[10px] px-1 rounded bg-secondary-fixed text-on-secondary-fixed">गृह केंद्र</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm font-bold">10:30 AM • उपस्थित (Arrived)</span>
+</div>
+</div>
+<!-- Clinical Tag / Chronic NCD Protocol -->
+<div class="p-2 rounded-lg bg-error-container/40 flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-error shrink-0 mt-0.5">vital_signs</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-on-error-container">Type 2 Diabetes + Hypertension</span>
+<span class="font-label-sm text-[10px] px-1 rounded bg-error text-on-error font-bold">NCD High</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">औषध साठा: Tab. Metformin 500mg, Amlodipine 5mg</span>
+</div>
+</div>
+<!-- Primary Touch Actions (min 44px height) -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="min-h-[48px] px-space-md rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 shadow-sm active:scale-98 transition-all" onclick="handleStartVisit('PAT-MH-4290', 'Ramesh Vithal Patil')" type="button">
+<span class="material-symbols-outlined text-[20px]">stethoscope</span>
+<span>भेट सुरू करा</span>
+</button>
+<button class="min-h-[48px] px-space-md rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 active:scale-98 transition-all" onclick="handleViewProfile('PAT-MH-4290')" type="button">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span>तपशील पहा</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Sharda Kailas Chaudhari (ANC / Maternal Care) -->
+<article class="patient-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm" data-category="today anc" data-query="sharda kailas chaudhari pat-mh-3108 91-8821-3910-4491 anc maternal kusumba" data-village="kusumba">
+<!-- Card Header: Profile Photo + Primary Identity -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-13 h-13 rounded-full object-cover shadow-inner bg-surface-container" data-alt="Young Indian woman in her late twenties wearing an embroidered green saree in rural Maharashtra primary healthcare clinic, natural soft illumination, optimistic warm expression" height="52" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALV2bRotRyPC7Ie1c0rrPIZJoVCnpEa2z7qTNDtOA9BDmK9qJfpuFaDWP5fUgsLRs_Rr7Kq2FkkLSyWTQbPxGH0SR0kgTuazV2pzWNLZLY9PXO4Aqzj_00IvdixS706Y3wha3aliLr2SNOxhJ7NxFBzesACeWBkwsZRq9MJpa4gH-_hCe8iA8vsYwv1_unZSoVG6xPyBt62HfiCjh1D-pU06_23s4LTshsNPJ22xiiQc69pLpCSg" width="52"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary text-[10px] font-bold shadow-sm" title="ANC Tracked">
+              ★
+            </span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Sharda K. Chaudhari</h2>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full bg-surface-container text-secondary font-medium">वय २६ वर्षे • स्त्री</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">PAT-MH-3108</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">fingerprint</span>
+<span class="font-label-sm text-[11px] text-tertiary font-mono">ABHA: 91-8821-3910-4491</span>
+</div>
+</div>
+</div>
+<!-- Appointment Time Slot Badge -->
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-[10px] text-secondary uppercase font-bold tracking-tight">वेळ स्लॉट</span>
+<span class="font-label-lg text-label-lg font-bold text-tertiary">11:30 AM</span>
+</div>
+</div>
+<!-- Vital Location & Status Ribbon -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between gap-2 flex-wrap">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">cottage</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Kusumba Sector 1</span>
+<span class="font-label-sm text-[10px] px-1 rounded bg-secondary-fixed text-on-secondary-fixed">असोडा PHC</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-bold">नियोजित (Scheduled)</span>
+</div>
+</div>
+<!-- Maternal Care Milestone Pill Banner -->
+<div class="p-2.5 rounded-lg bg-primary-fixed/30 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0">pregnant_woman</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-primary-fixed">ANC 2nd Trimester (२४ आठवडे)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">TT-2 लस व IFA गोळ्या वाटप प्रलंबित</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-[10px] font-bold text-primary uppercase">EDD</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">14 Aug 2025</span>
+</div>
+</div>
+<!-- Primary Touch Actions -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="min-h-[48px] px-space-md rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 active:scale-98 transition-all" onclick="handleViewProfile('PAT-MH-3108')" type="button">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span>View Profile</span>
+</button>
+<button class="min-h-[48px] px-space-md rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5 shadow-sm active:scale-98 transition-all" onclick="handlePrepareSlip('PAT-MH-3108', 'Sharda Kailas Chaudhari')" type="button">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span>Prepare Slip</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Prakash Namdeo Zope (Follow-up Pending / NCD) -->
+<article class="patient-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-space-sm" data-category="ncd refill" data-query="prakash namdeo zope pat-mh-1980 ncd asoda rural follow-up" data-village="gaothan">
+<!-- Card Header: Profile Photo + Primary Identity -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-13 h-13 rounded-full object-cover shadow-inner bg-surface-container" data-alt="Portrait of an Indian senior farmer in white Gandhi topi cap with thoughtful warm eyes, authentic outdoor farm shade backdrop, subtle natural lighting in Maharashtra village" height="52" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkNOWk7EvdC47TMtW5pmxX8ZJ8XVtWMEJCsEGrK1Ni0SHArmN73DGeAYpIkEhi8N_OTp5RW58nVNgaWZcRJiAsAx1DY2mhZ_Miu7gm_YQSaSP38VH2ttj__9tjyjz0W1RJYly65bU9mktNlRk8shSsxCSDxEDQL9R4Ga8IYKK6779jSBoNfTb_X4lIhc6bzo2FuivC1xrIXuiuG16rHTx7KKixMn_-99MH2ffUjCTbK0rGh6NVlw" width="52"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-on-secondary text-[10px] font-bold shadow-sm" title="ABHA Connected">
+              ✓
+            </span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Prakash N. Zope</h2>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded-full bg-surface-container text-secondary font-medium">वय ६१ वर्षे • पु</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">PAT-MH-1980</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>
+<span class="font-label-sm text-[11px] text-primary font-semibold">ABHA Account Linked</span>
+</div>
+</div>
+</div>
+<!-- Overdue Days Warning Flag -->
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-[10px] text-error font-bold uppercase tracking-tight">पाठपुरावा प्रलंबित</span>
+<span class="font-label-md text-label-md font-bold text-error">१८ दिवस बाकी</span>
+</div>
+</div>
+<!-- Vital Location & Status Ribbon -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between gap-2 flex-wrap">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">cottage</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Asoda Rural, Wani Galli</span>
+<span class="font-label-sm text-[10px] px-1 rounded bg-secondary-fixed text-on-secondary-fixed">असोडा केंद्र</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container shrink-0">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span class="font-label-sm text-label-sm font-bold">Follow-up Due</span>
+</div>
+</div>
+<!-- Chronic Protocol / Follow-up Details -->
+<div class="p-2 rounded-lg bg-surface-container-high/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">history_edu</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-on-surface">NCD Care Review: Hypertension</span>
+<span class="font-label-sm text-[10px] px-1 rounded bg-secondary-container text-on-secondary-container font-semibold">BP Check Refill</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">शेवटची तपासणी: १८ दिवसांपूर्वी (BP: 148/92 mmHg)</span>
+</div>
+</div>
+<!-- Action Button (Full width solid button for urgent scheduling) -->
+<div class="pt-1">
+<button class="w-full min-h-[48px] px-space-md rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm active:scale-98 transition-all" onclick="handleScheduleVisit('PAT-MH-1980', 'Prakash Namdeo Zope')" type="button">
+<span class="material-symbols-outlined text-[20px]">event_available</span>
+<span>गृहभेटीचे नियोजन करा (Schedule Visit)</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Dynamic Empty State (Revealed when search yields 0 items) -->
+<div class="hidden px-margin py-space-xl flex-col items-center justify-center text-center" id="noResultsState">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[32px]">person_search</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">कोणताही रुग्ण सापडला नाही</h3>
+<p class="font-body-md text-body-md text-secondary mt-1 max-w-xs">
+      No assigned patients matched your search or selected cluster. Check spelling or clear filters.
+    </p>
+<button class="mt-space-md min-h-[48px] px-space-lg rounded-xl bg-surface-container text-primary font-label-lg text-label-lg font-bold flex items-center gap-1.5 active:scale-95 transition-transform" id="resetFiltersBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>सर्व फिल्टर्स रीसेट करा</span>
+</button>
+</div>
+<!-- Least-Privilege Privacy & Compliance Notice -->
+<div class="mx-margin mt-space-lg mb-space-sm p-space-md rounded-xl bg-surface-container flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-bold text-on-surface flex items-center gap-1">
+<span>अधिकृत आरोग्य सेवक प्रवेश (NHM Guidelines)</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified</span>
+</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
+        You are accessing patient medical profiles registered strictly within the Asoda PHC catchment area under the National Health Mission. Unauthorized capture, dissemination, or exposure of identifiable health records is punishable under the DPDP Act 2023.
+      </p>
+<span class="font-label-sm text-[10px] text-outline mt-1">Audit Log: HW-ANM-001 (S. Patil) • Session Verified</span>
+</div>
+</div>
+<!-- Interactive Action Confirmation Toast (Accessible announcement) -->
+<div aria-live="polite" class="fixed bottom-20 left-4 right-4 z-40 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none p-3.5 rounded-xl bg-inverse-surface text-inverse-on-surface flex items-center justify-between shadow-xl" id="actionToast" role="status">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary-fixed text-[20px] shrink-0">check_circle</span>
+<span class="font-label-md text-label-md truncate" id="toastMessage">कृती यशस्वीरीत्या नोंदवली गेली</span>
+</div>
+<span class="font-label-sm text-[11px] text-secondary-fixed shrink-0 pl-2">Just now</span>
+</div>
+</div>
+<script>
+  (function initPatientSearch() {
+    const searchInput = document.getElementById('patientSearchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const clusterSelect = document.getElementById('clusterSelect');
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const cards = document.querySelectorAll('.patient-card');
+    const countNotice = document.getElementById('resultsCountNotice');
+    const noResultsState = document.getElementById('noResultsState');
+    const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+    const toast = document.getElementById('actionToast');
+    const toastMsg = document.getElementById('toastMessage');
+
+    let currentFilter = 'all';
+    let currentCluster = 'all';
+    let searchQuery = '';
+
+    function showToast(message) {
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3200);
+    }
+
+    // Expose handlers globally for card actions
+    window.handleStartVisit = function(patId, name) {
+      showToast(`${name} (${patId}) यांची तपासणी सुरू केली.`);
+    };
+
+    window.handleViewProfile = function(patId) {
+      showToast(`${patId} प्रोफाइल उघडत आहे...`);
+    };
+
+    window.handlePrepareSlip = function(patId, name) {
+      showToast(`${name} साठी OPD स्लिप तयार करण्यात आली.`);
+    };
+
+    window.handleScheduleVisit = function(patId, name) {
+      showToast(`${name} यांच्या गृहभेटीची तारीख नोंदवली.`);
+    };
+
+    function applyFilters() {
+      let visibleCount = 0;
+      const query = searchQuery.trim().toLowerCase();
+
+      cards.forEach(card => {
+        const cardCategories = card.getAttribute('data-category') || '';
+        const cardVillage = card.getAttribute('data-village') || '';
+        const cardQuery = card.getAttribute('data-query') || '';
+
+        const matchesCategory = (currentFilter === 'all') || cardCategories.includes(currentFilter);
+        const matchesCluster = (currentCluster === 'all') || (cardVillage === currentCluster);
+        const matchesSearch = (!query) || cardQuery.toLowerCase().includes(query);
+
+        if (matchesCategory && matchesCluster && matchesSearch) {
+          card.classList.remove('hidden');
+          card.classList.add('flex');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+          card.classList.remove('flex');
+        }
+      });
+
+      if (countNotice) {
+        countNotice.innerHTML = `Showing <strong class="text-on-surface">${visibleCount}</strong> of 38 assigned patients in your active beat`;
+      }
+
+      if (noResultsState) {
+        if (visibleCount === 0) {
+          noResultsState.classList.remove('hidden');
+          noResultsState.classList.add('flex');
+        } else {
+          noResultsState.classList.add('hidden');
+          noResultsState.classList.remove('flex');
+        }
+      }
+    }
+
+    // Search input listener
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        if (clearBtn) {
+          if (searchQuery.length > 0) {
+            clearBtn.classList.remove('hidden');
+          } else {
+            clearBtn.classList.add('hidden');
+          }
+        }
+        applyFilters();
+      });
+    }
+
+    // Clear search
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = '';
+          searchQuery = '';
+          clearBtn.classList.add('hidden');
+          searchInput.focus();
+          applyFilters();
+        }
+      });
+    }
+
+    // Cluster selector
+    if (clusterSelect) {
+      clusterSelect.addEventListener('change', (e) => {
+        currentCluster = e.target.value;
+        applyFilters();
+      });
+    }
+
+    // Quick filter chips
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary');
+          c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+          c.setAttribute('aria-selected', 'false');
+        });
+        chip.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+        chip.classList.add('bg-primary', 'text-on-primary');
+        chip.setAttribute('aria-selected', 'true');
+
+        currentFilter = chip.getAttribute('data-filter') || 'all';
+        applyFilters();
+      });
+    });
+
+    // Reset button in empty state
+    if (resetFiltersBtn) {
+      resetFiltersBtn.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = '';
+          searchQuery = '';
+        }
+        if (clearBtn) clearBtn.classList.add('hidden');
+        if (clusterSelect) {
+          clusterSelect.value = 'all';
+          currentCluster = 'all';
+        }
+        filterChips.forEach((c, idx) => {
+          if (idx === 0) {
+            c.classList.add('bg-primary', 'text-on-primary');
+            c.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+            c.setAttribute('aria-selected', 'true');
+          } else {
+            c.classList.remove('bg-primary', 'text-on-primary');
+            c.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+            c.setAttribute('aria-selected', 'false');
+          }
+        });
+        currentFilter = 'all';
+        applyFilters();
+      });
+    }
+
+    // Toggle Sort Micro-interaction
+    const toggleSortBtn = document.getElementById('toggleSortOrder');
+    let ascending = true;
+    if (toggleSortBtn) {
+      toggleSortBtn.addEventListener('click', () => {
+        ascending = !ascending;
+        showToast(ascending ? "वेळेनुसार चढता क्रम (Earliest first)" : "नवीनतम नोंदी आधी (Latest first)");
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary font-bold bg-primary-fixed/20"><div class="flex justify-around items-stretch h-16 px-1"><a aria-label="Dashboard डॅशबोर्ड" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] min-w-[44px] rounded-xl text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-[11px] leading-tight text-center truncate">डॅशबोर्ड</span></a><a aria-label="Appointments भेटी" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] min-w-[44px] rounded-xl text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="appointments" href="#"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-sm text-[11px] leading-tight text-center truncate">भेटी</span></a><a aria-current="page" aria-label="Patients रुग्ण" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] min-w-[44px] rounded-xl transition-all gap-0.5 text-primary font-bold bg-primary-fixed/20" data-path="patients" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-[11px] leading-tight text-center truncate">रुग्ण</span></a><a aria-label="Medicines औषध साठा" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] min-w-[44px] rounded-xl text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="medicines" href="#"><span class="material-symbols-outlined text-[22px]">medication</span><span class="font-label-sm text-[11px] leading-tight text-center truncate">औषधे</span></a><a aria-label="Profile प्रोफाईल" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] min-w-[44px] rounded-xl text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-sm text-[11px] leading-tight text-center truncate">प्रोफाईल</span></a></div></nav></body></html>

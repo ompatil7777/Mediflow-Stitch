@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><title>MediFlow+ Public Health Network</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "on-secondary-fixed": "#001f28", "secondary": "#47626e", "on-tertiary": "#ffffff", "error": "#ba1a1a", "on-tertiary-container": "#e7f2ff", "background": "#f2fbff", "on-primary-fixed-variant": "#005144", "secondary-fixed": "#c9e7f4", "surface-variant": "#cee6f1", "on-background": "#061e26", "on-tertiary-fixed": "#001d31", "secondary-container": "#c7e4f2", "inverse-primary": "#7bd7c1", "on-primary-fixed": "#00201a", "surface-container-highest": "#cee6f1", "outline": "#6e7a75", "surface-container-high": "#d4ecf7", "on-primary-container": "#b3ffeb", "on-error-container": "#93000a", "on-secondary-fixed-variant": "#2f4b55", "secondary-fixed-dim": "#aecbd8", "on-surface-variant": "#3e4946", "on-secondary-container": "#4b6772", "surface-container-lowest": "#ffffff", "outline-variant": "#bdc9c4", "on-surface": "#061e26", "surface-container-low": "#e4f7ff", "primary-container": "#0b7b69", "surface-tint": "#006b5b", "primary-fixed": "#98f4dd", "surface": "#f2fbff", "primary": "#006051", "surface-bright": "#f2fbff", "error-container": "#ffdad6", "tertiary": "#005a89", "tertiary-fixed": "#cce5ff", "tertiary-container": "#0073ae", "tertiary-fixed-dim": "#93ccff", "inverse-surface": "#1d333c", "on-tertiary-fixed-variant": "#004b73", "surface-dim": "#c6dee8", "on-primary": "#ffffff", "primary-fixed-dim": "#7bd7c1", "on-error": "#ffffff", "inverse-on-surface": "#ddf5ff", "surface-container": "#d9f2fd" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "margin-desktop": "2rem", "gutter-desktop": "1.5rem", "margin": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter": "1rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-lg": ["Noto Sans"], "body-md": ["Noto Sans"], "headline-lg": ["Noto Sans"], "label-sm": ["Noto Sans"], "body-lg": ["Noto Sans"], "headline-sm": ["Noto Sans"], "display-lg": ["Noto Sans"], "display-lg-mobile": ["Noto Sans"], "body-sm": ["Noto Sans"], "label-md": ["Noto Sans"], "headline-md": ["Noto Sans"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen pt-safe pb-safe selection:bg-primary-fixed selection:text-on-primary-fixed"><main class="flex flex-col relative w-full px-margin py-space-xl flex-grow bg-surface"><div class="flex flex-col w-full">
+<!-- Top Bar: Regional Authority Seal & Multilingual Segmented Toggle -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">local_hospital</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Jalgaon District</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant -mt-1">आरोग्य विभाग महाराष्ट्र शासन</span>
+</div>
+</div>
+<!-- Script Selector Pill -->
+<div class="flex items-center p-0.5 bg-surface-container rounded-full" id="lang-selector-group">
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-sm transition-all duration-150" id="btn-lang-en" onclick="switchLanguage('en')" type="button">English</button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm text-secondary hover:text-on-surface transition-all duration-150" id="btn-lang-mr" onclick="switchLanguage('mr')" type="button">मराठी</button>
+<button class="px-2.5 py-1 rounded-full font-label-sm text-label-sm text-secondary hover:text-on-surface transition-all duration-150" id="btn-lang-hi" onclick="switchLanguage('hi')" type="button">हिन्दी</button>
+</div>
+</div>
+<!-- Hero Visual Framing Banner -->
+<div class="relative w-full rounded-xl overflow-hidden mt-space-sm mb-space-md shadow-sm">
+<div class="w-full h-28 bg-cover bg-center" data-alt="Modern clinical public health dispensary cold-storage supply warehouse with organized vaccine batches, pharmaceutical boxes, and digital temperature sensors bathed in soft morning daylight and calm deep emerald tones, clean clinical photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDipmVd8gTMPM9tSSkH33Y_BJ6ZxyVoKlqQylIu7YKoOQe_3WzGr16Ek6o9_iRxA1zY1X_NekWEIbZkdtXnP8BtTkiW2QvH0HUQnIJ0Iap3x60nbmVeIpvZCofQTF3d2aIibX293L-QZmAOzbXFgegILIX57pZl-9HyC_0ZjE2K4osSnaVLUmf3BTYDZ0qhsqmx5jiBl_ipWGF-qnV0wqB5bZucFClW9tplQwzXmIpsBLA3H35LZw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/60 to-transparent flex flex-col justify-end p-space-md">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider">Public Health Network • MediFlow+</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-primary font-semibold leading-tight" id="main-heading">
+        Account Login / खात्यात प्रवेश करा
+      </h1>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim leading-snug" id="sub-heading">
+        Enter your registered credentials to access your secure portal.
+      </p>
+</div>
+</div>
+<!-- Primary Authentication Form Card -->
+<form class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md" id="loginForm" onsubmit="handleLoginSubmit(event)">
+<!-- Field 1: Credential Identifier -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5" for="usernameInput" id="lbl-username">
+<span>Username, Email, or Mobile</span>
+<span class="text-on-surface-variant font-normal">/ वापरकर्ता नाव किंवा मोबाइल</span>
+</label>
+<div class="relative flex items-center">
+<div class="absolute left-3 text-secondary pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<input autocomplete="username" class="w-full h-12 pl-10 pr-4 bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006051] transition-all" id="usernameInput" name="username" placeholder="e.g. 9823012345 or PHARM-ASO-001" required="" type="text"/>
+</div>
+<div class="flex items-center gap-1 pt-0.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">District code prefix accepted (e.g. JLG-DOC-892)</span>
+</div>
+</div>
+<!-- Field 2: Password -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="passwordInput" id="lbl-password">
+<span>Password</span>
+<span class="text-on-surface-variant font-normal">/ पासवर्ड</span>
+</label>
+</div>
+<div class="relative flex items-center">
+<div class="absolute left-3 text-secondary pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input autocomplete="current-password" class="w-full h-12 pl-10 pr-12 bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006051] transition-all" id="passwordInput" name="password" placeholder="••••••••••••" required="" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-2 w-9 h-9 flex items-center justify-center text-secondary hover:text-on-surface rounded-full transition-colors" id="pwd-toggle-btn" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="pwd-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Inline Options: Remember & Forgot Password -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-5 h-5 rounded accent-primary-container cursor-pointer" id="rememberMe" name="remember" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface" id="lbl-remember">Remember on this device</span>
+</label>
+<button class="font-label-sm text-label-sm text-primary hover:underline" id="lbl-forgot" onclick="showToastNotification('password-reset')" type="button">
+        Forgot Password? / विसरलात?
+      </button>
+</div>
+<!-- Dynamic Inline Validation Toast Placeholder -->
+<div class="hidden transition-all duration-200" id="liveFeedbackToast"></div>
+<!-- Primary Operational Action -->
+<button class="w-full h-12 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md hover:bg-primary-container active:scale-[0.99] transition-all" id="submitLoginBtn" type="submit">
+<span class="material-symbols-outlined text-[20px]">login</span>
+<span id="btn-login-text">Secure Login / सुरक्षित प्रवेश</span>
+</button>
+</form>
+<!-- Account Type Disambiguation Notice -->
+<div class="mt-space-md bg-surface-container-high rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold" id="disambig-title">
+          Looking to register as a citizen?
+        </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mt-0.5" id="disambig-desc">
+          Patients and family members may self-register for dispensary pick-up slots and vaccination tracking.
+        </p>
+</div>
+</div>
+<button class="w-full h-11 bg-surface-container-lowest text-tertiary font-label-md text-label-md rounded-lg flex items-center justify-center gap-1.5 shadow-sm hover:bg-surface-container-low transition-colors" onclick="triggerCitizenRegistrationNotice()" type="button">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+<span id="btn-citizen-register">Create Patient Account / नवीन रुग्ण नोंदणी</span>
+</button>
+<!-- Administrative Lockdown Info -->
+<div class="bg-surface-container rounded-lg p-2.5 flex items-start gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">shield</span>
+<p class="font-body-sm text-[11px] leading-snug" id="official-notice-text">
+<strong class="font-semibold text-on-surface">Official Accounts Notice:</strong> Health Workers, Pharmacists, Doctors, and District Officers must use administrator-issued credentials. Public self-registration is strictly restricted to citizens.
+      </p>
+</div>
+</div>
+<!-- Interactive System Security & Production UX Feedback Tester -->
+<div class="mt-space-md bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">tune</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">System State Diagnostics</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] bg-primary-fixed text-on-primary-fixed-variant">Production Sandbox</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Tap to test real-world exception notifications and security handling states:
+    </p>
+<!-- Diagnostic Tabs -->
+<div class="grid grid-cols-3 gap-1.5">
+<button class="py-2 px-1 text-center rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-[11px] hover:bg-surface-container-high transition-colors" onclick="previewFeedbackState('invalid')" type="button">
+<span class="block material-symbols-outlined text-[16px] text-error mx-auto mb-0.5">warning</span>
+        Invalid Creds
+      </button>
+<button class="py-2 px-1 text-center rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-[11px] hover:bg-surface-container-high transition-colors" onclick="previewFeedbackState('locked')" type="button">
+<span class="block material-symbols-outlined text-[16px] text-tertiary mx-auto mb-0.5">lock_clock</span>
+        Account Locked
+      </button>
+<button class="py-2 px-1 text-center rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-[11px] hover:bg-surface-container-high transition-colors" onclick="previewFeedbackState('pending')" type="button">
+<span class="block material-symbols-outlined text-[16px] text-secondary mx-auto mb-0.5">pending_actions</span>
+        Pending Verify
+      </button>
+</div>
+<!-- Active State Card Container -->
+<div class="p-space-sm rounded-lg bg-surface-container-low transition-all" id="statePreviewContainer">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Gateway Operational</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Cold-Chain logistics auth node #MH-19-JLG-04 online. 256-bit TLS encrypted session.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Field Contact Pill -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">District Helpdesk</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Toll Free: 1800-233-0492</span>
+</div>
+</div>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded-full bg-surface-container-lowest text-secondary">24x7 Support</span>
+</div>
+</div>
+<script>
+  // Language Dictionary Configuration
+  const i18nData = {
+    en: {
+      heading: "Account Login / खात्यात प्रवेश करा",
+      subheading: "Enter your registered credentials to access your secure portal.",
+      usernameLabel: "Username, Email, or Mobile / वापरकर्ता नाव किंवा मोबाइल",
+      passwordLabel: "Password / पासवर्ड",
+      remember: "Remember on this device",
+      forgot: "Forgot Password? / विसरलात?",
+      loginBtn: "Secure Login / सुरक्षित प्रवेश",
+      disambigTitle: "Looking to register as a citizen?",
+      disambigDesc: "Patients and family members may self-register for dispensary pick-up slots and vaccination tracking.",
+      citizenBtn: "Create Patient Account / नवीन रुग्ण नोंदणी",
+      officialNotice: "<strong class='font-semibold text-on-surface'>Official Accounts Notice:</strong> Health Workers, Pharmacists, Doctors, and District Officers must use administrator-issued credentials. Public self-registration is strictly restricted to citizens."
+    },
+    mr: {
+      heading: "खात्यात प्रवेश करा / Account Login",
+      subheading: "आपल्या अधिकृत पोर्टलमध्ये प्रवेश करण्यासाठी नोंदणीकृत तपशील प्रविष्ट करा.",
+      usernameLabel: "वापरकर्ता नाव, ईमेल किंवा मोबाइल क्रमांक",
+      passwordLabel: "पासवर्ड",
+      remember: "या डिव्हाइसवर स्मरण ठेवा",
+      forgot: "पासवर्ड विसरलात?",
+      loginBtn: "सुरक्षित प्रवेश (लॉगिन करा)",
+      disambigTitle: "नागरिक म्हणून नोंदणी करू इच्छिता?",
+      disambigDesc: "रुग्ण आणि कुटुंबीय औषध वितरण वेळ आणि लसीकरण ट्रॅकिंगसाठी स्वतः नोंदणी करू शकतात.",
+      citizenBtn: "नवीन रुग्ण खाते तयार करा",
+      officialNotice: "<strong class='font-semibold text-on-surface'>अधिकृत खात्यांची सूचना:</strong> आरोग्य कर्मचारी, औषधनिर्माते, वैद्यकीय अधिकारी आणि जिल्हा अधिकाऱ्यांनी प्रशासनाने दिलेले ओळखपत्र वापरावे."
+    },
+    hi: {
+      heading: "खाते में प्रवेश करें / Account Login",
+      subheading: "अपने सुरक्षित पोर्टल तक पहुंचने के लिए पंजीकृत क्रेडेंशियल दर्ज करें।",
+      usernameLabel: "उपयोगकर्ता नाम, ईमेल या मोबाइल नंबर",
+      passwordLabel: "पासवर्ड",
+      remember: "इस डिवाइस पर याद रखें",
+      forgot: "पासवर्ड भूल गए?",
+      loginBtn: "सुरक्षित लॉगिन करें",
+      disambigTitle: "क्या आप नागरिक के रूप में पंजीकरण कर रहे हैं?",
+      disambigDesc: "मरीज और उनके परिजन दवा वितरण और टीकाकरण ट्रैकिंग हेतु स्वयं पंजीकरण कर सकते हैं।",
+      citizenBtn: "नया मरीज खाता बनाएं",
+      officialNotice: "<strong class='font-semibold text-on-surface'>आधिकारिक खाता सूचना:</strong> स्वास्थ्य कार्यकर्ता, फार्मासिस्ट, डॉक्टर और जिला अधिकारी व्यवस्थापक द्वारा जारी क्रेडेंशियल का उपयोग करें।"
+    }
+  };
+
+  let currentLang = 'en';
+
+  function switchLanguage(lang) {
+    currentLang = lang;
+    const buttons = ['en', 'mr', 'hi'];
+    buttons.forEach(b => {
+      const el = document.getElementById('btn-lang-' + b);
+      if (b === lang) {
+        el.className = "px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-sm transition-all duration-150";
+      } else {
+        el.className = "px-2.5 py-1 rounded-full font-label-sm text-label-sm text-secondary hover:text-on-surface transition-all duration-150";
+      }
+    });
+
+    const data = i18nData[lang];
+    document.getElementById('main-heading').innerText = data.heading;
+    document.getElementById('sub-heading').innerText = data.subheading;
+    document.getElementById('lbl-username').innerHTML = `<span>${data.usernameLabel}</span>`;
+    document.getElementById('lbl-password').innerHTML = `<span>${data.passwordLabel}</span>`;
+    document.getElementById('lbl-remember').innerText = data.remember;
+    document.getElementById('lbl-forgot').innerText = data.forgot;
+    document.getElementById('btn-login-text').innerText = data.loginBtn;
+    document.getElementById('disambig-title').innerText = data.disambigTitle;
+    document.getElementById('disambig-desc').innerText = data.disambigDesc;
+    document.getElementById('btn-citizen-register').innerText = data.citizenBtn;
+    document.getElementById('official-notice-text').innerHTML = data.officialNotice;
+  }
+
+  function togglePasswordVisibility() {
+    const input = document.getElementById('passwordInput');
+    const icon = document.getElementById('pwd-icon');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.innerText = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.innerText = 'visibility';
+    }
+  }
+
+  function handleLoginSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitLoginBtn');
+    const originalText = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[20px]">autorenew</span> Authenticating...`;
+
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+      // Trigger sample invalid credential notification to demonstrate feedback UX
+      previewFeedbackState('invalid');
+    }, 900);
+  }
+
+  function previewFeedbackState(state) {
+    const container = document.getElementById('statePreviewContainer');
+    const liveToast = document.getElementById('liveFeedbackToast');
+
+    if (state === 'invalid') {
+      const html = `
+        <div class="flex items-start gap-2 bg-error-container text-on-error-container p-space-sm rounded-lg animate-pulse">
+          <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">error</span>
+          <div class="flex flex-col">
+            <span class="font-label-md text-label-md font-semibold text-error">अवैध वापरकर्ता नाव किंवा पासवर्ड (Invalid Credentials)</span>
+            <span class="font-body-sm text-[11px] leading-tight mt-0.5 text-on-error-container">The username or security key provided does not match district health registry records. Please re-check or contact your nodal lead.</span>
+          </div>
+        </div>
+      `;
+      container.innerHTML = html;
+      liveToast.className = "flex flex-col transition-all duration-200";
+      liveToast.innerHTML = html;
+    } else if (state === 'locked') {
+      const html = `
+        <div class="flex items-start gap-2 bg-error-container text-on-error-container p-space-sm rounded-lg">
+          <span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">lock_person</span>
+          <div class="flex flex-col">
+            <span class="font-label-md text-label-md font-semibold text-error">खाते तात्पुरते लॉक केले आहे - 3 अयशस्वी प्रयत्न</span>
+            <span class="font-body-sm text-[11px] leading-tight mt-0.5 text-on-error-container">Account suspended for 15 minutes due to consecutive failed logons. Use the district helpdesk hotline or verify OTP.</span>
+          </div>
+        </div>
+      `;
+      container.innerHTML = html;
+      liveToast.className = "flex flex-col transition-all duration-200";
+      liveToast.innerHTML = html;
+    } else if (state === 'pending') {
+      const html = `
+        <div class="flex items-start gap-2 bg-surface-container-high text-on-surface p-space-sm rounded-lg">
+          <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">hourglass_top</span>
+          <div class="flex flex-col">
+            <span class="font-label-md text-label-md font-semibold text-on-surface">प्रलंबित पडताळणी (Pending Administrator Activation)</span>
+            <span class="font-body-sm text-[11px] leading-tight mt-0.5 text-on-surface-variant">Your staff credentials (Jalgaon Sub-District) have been enrolled but await digital signature approval by the Chief Medical Officer.</span>
+          </div>
+        </div>
+      `;
+      container.innerHTML = html;
+      liveToast.className = "flex flex-col transition-all duration-200";
+      liveToast.innerHTML = html;
+    }
+  }
+
+  function showToastNotification(type) {
+    const liveToast = document.getElementById('liveFeedbackToast');
+    liveToast.className = "flex flex-col transition-all duration-200";
+    liveToast.innerHTML = `
+      <div class="flex items-center gap-2 bg-secondary-container text-on-secondary-container p-2.5 rounded-lg">
+        <span class="material-symbols-outlined text-[18px]">send_to_mobile</span>
+        <span class="font-body-sm text-[12px]">Password reset instructions dispatched to your linked registered mobile number.</span>
+      </div>
+    `;
+    setTimeout(() => {
+      liveToast.className = "hidden";
+    }, 4500);
+  }
+
+  function triggerCitizenRegistrationNotice() {
+    const container = document.getElementById('statePreviewContainer');
+    container.innerHTML = `
+      <div class="flex items-start gap-2 bg-tertiary-fixed text-on-tertiary-fixed p-space-sm rounded-lg">
+        <span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">assignment_ind</span>
+        <div class="flex flex-col">
+          <span class="font-label-md text-label-md font-semibold text-tertiary">रुग्ण नोंदणी पोर्टल (Citizen Registration Flow)</span>
+          <span class="font-body-sm text-[11px] leading-tight mt-0.5 text-on-tertiary-fixed-variant">Redirecting to Aadhaar & ABHA Health ID verification step for public patient profiles.</span>
+        </div>
+      </div>
+    `;
+  }
+</script><div class="mt-auto pt-space-lg text-center"><p class="font-body-sm text-body-sm text-on-surface-variant">Information provided through this service is for care navigation and coordination and does not replace professional medical advice.</p></div></main></body></html>

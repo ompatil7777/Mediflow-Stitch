@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#7bd7c1", "secondary-fixed-dim": "#aecbd8", "surface-container": "#d9f2fd", "on-secondary-fixed-variant": "#2f4b55", "primary-container": "#0b7b69", "secondary-container": "#c7e4f2", "surface-container-lowest": "#ffffff", "surface-variant": "#cee6f1", "secondary": "#47626e", "surface-dim": "#c6dee8", "tertiary-fixed-dim": "#93ccff", "on-secondary-fixed": "#001f28", "on-tertiary-fixed-variant": "#004b73", "tertiary-fixed": "#cce5ff", "on-primary": "#ffffff", "inverse-surface": "#1d333c", "on-secondary": "#ffffff", "on-tertiary-container": "#e7f2ff", "secondary-fixed": "#c9e7f4", "surface-tint": "#006b5b", "on-primary-container": "#b3ffeb", "inverse-on-surface": "#ddf5ff", "on-surface": "#061e26", "on-tertiary-fixed": "#001d31", "on-secondary-container": "#4b6772", "primary": "#006051", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "error-container": "#ffdad6", "tertiary-container": "#0073ae", "outline": "#6e7a75", "surface-bright": "#f2fbff", "on-background": "#061e26", "surface-container-high": "#d4ecf7", "background": "#f2fbff", "inverse-primary": "#7bd7c1", "surface-container-highest": "#cee6f1", "primary-fixed": "#98f4dd", "on-error": "#ffffff", "on-primary-fixed": "#00201a", "surface": "#f2fbff", "error": "#ba1a1a", "on-primary-fixed-variant": "#005144", "outline-variant": "#bdc9c4", "tertiary": "#005a89", "on-surface-variant": "#3e4946", "surface-container-low": "#e4f7ff" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "1rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "margin-desktop": "2rem", "space-lg": "1.5rem" }, fontFamily: { "headline-sm": ["Noto Sans"], "body-sm": ["Noto Sans"], "body-md": ["Noto Sans"], "body-lg": ["Noto Sans"], "label-lg": ["Noto Sans"], "label-sm": ["Noto Sans"], "display-lg-mobile": ["Noto Sans"], "display-lg": ["Noto Sans"], "label-md": ["Noto Sans"], "headline-md": ["Noto Sans"], "headline-lg": ["Noto Sans"] }, fontSize: { "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }], "display-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "700" }], "display-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(6,30,38,0.04)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><div class="w-11 h-11 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-[0_2px_6px_rgba(11,123,105,0.25)]"><span class="material-symbols-outlined text-[24px]">local_hospital</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">MediFlow+</span><span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[10px] uppercase font-bold tracking-wider">GOV</span></div><span class="font-label-sm text-[10px] text-on-surface-variant font-medium">सार्वजनिक आरोग्य प्रणाली</span></div></div><div class="flex items-center gap-space-xs"><button class="min-h-[44px] px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center gap-1 transition-colors" type="button"><span class="material-symbols-outlined text-primary text-[18px]">verified_user</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">DHO</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button><div class="flex items-center bg-surface-container-low p-1 rounded-full"><button class="min-h-[32px] px-2 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-[0_1px_3px_rgba(6,30,38,0.08)]" type="button">EN</button><button class="min-h-[32px] px-2 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">मरा</button><button class="min-h-[32px] px-2 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">हि</button></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Top Context Header Area -->
+<div class="py-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm uppercase tracking-wider">Production Architecture • Live Grid</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-primary font-semibold">Mesh Active</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">MediFlow+ Unified Closed Loop</h1>
+<p class="font-label-md text-label-md text-primary font-medium">एकत्रित आरोग्य पुरवठा साखळी व थेट पडताळणी प्रणाली</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cross-Role Operational Matrix &amp; Real-Time Loop Architecture • Jalgaon District Network (जळगाव जिल्हा)</p>
+</div>
+<!-- Executive Loop Posture Banner -->
+<div class="rounded-xl bg-surface-container-lowest shadow-md p-space-md mb-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-primary text-on-primary">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold leading-tight tracking-wide">ONE CONNECTED LOOP • 100% SYNCHRONIZED</span>
+<span class="font-label-sm text-label-sm text-on-primary-container font-medium">सलग आरोग्य पुरवठा — जिल्हास्तरीय अखंड नेटवर्क</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm font-bold shadow-sm">ACTIVE</span>
+</div>
+<!-- 4 High Density Metric Cards -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Connected Roles</span>
+<span class="material-symbols-outlined text-primary text-[20px]">groups</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">6</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Live Tiers</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Patient to State Depot</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Operational Nodes</span>
+<span class="material-symbols-outlined text-primary text-[20px]">domain</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">8</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">PHC Centers</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">100% Online Compliance</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Immutable Ledger</span>
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">1</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Chain</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">ISO 27001 &amp; DPDP 2023</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Data Integrity</span>
+<span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">0</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Discrepancy</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">100% Production Grade</span>
+</div>
+</div>
+</div>
+<!-- Interactive Visual Supply Loop Map -->
+<div class="mb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">all_inclusive</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">The 10-Stage Closed-Loop Pipeline</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">10 टप्पे</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tap any stage to view live telemetry, cryptographic hashes, and operational constraints.</p>
+<!-- Stage Flow List -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<!-- Stage 01 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-xs transition-all hover:shadow-md cursor-pointer group" onclick="toggleDetails('stage-01')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-bold shrink-0">01</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Patient / Citizen</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">रुग्ण व नागरिक नोंदणी</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-sm font-semibold">Inward Entry</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10">Appointment booking, PHC discovery, care navigation &amp; medicine availability checking.</p>
+<div class="hidden pl-10 pt-space-xs flex flex-col gap-space-xs" id="stage-01">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface font-label-sm font-bold">
+<span>Telemetry Node: Jalgaon Central Citizen App</span>
+<span class="text-primary">Verified ABHA Auth</span>
+</div>
+<span>Current State: Public catalog queried for Asoda PHC ORS stock. Non-dispensing identity bound to Ayushman Bharat Health Account.</span>
+</div>
+</div>
+</div>
+<!-- Stage 02 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-xs transition-all hover:shadow-md cursor-pointer group" onclick="toggleDetails('stage-02')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-bold shrink-0">02</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Health Worker / ANM</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">आरोग्य सेविका / ए.एन.एम.</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm font-semibold">Clinical Triage</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10">Patient roster check, clinical triage vitals, visit encounter notes &amp; medicine availability coordination (read-only).</p>
+<div class="hidden pl-10 pt-space-xs flex flex-col gap-space-xs" id="stage-02">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface font-label-sm font-bold">
+<span>Device: Ruggedized Field Tablet #HW-09</span>
+<span class="text-primary">Offline Sync Ready</span>
+</div>
+<span>Vitals recorded into encrypted enclave. Real-time formulation inventory queried without ledger mutation capability.</span>
+</div>
+</div>
+</div>
+<!-- Stage 03 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-xs transition-all hover:shadow-md cursor-pointer group" onclick="toggleDetails('stage-03')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-bold shrink-0">03</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">PHC Pharmacist Dispense</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">औषध वितरण व साठा वजावट</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm font-semibold">Stock Subtraction</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10">OPD barcode scan, Rule 65 statutory dispensing, real-time stock subtraction &amp; low-stock threshold trigger (Asoda PHC ORS deficit detected).</p>
+<div class="hidden pl-10 pt-space-xs flex flex-col gap-space-xs" id="stage-03">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface font-label-sm font-bold">
+<span>Station: Asoda PHC Dispensing Terminal</span>
+<span class="text-error font-bold">Buffer Alert (&lt; 50 pkts)</span>
+</div>
+<span>Rule 65 Registered Pharmacist sign-off. Serialized barcode deducts batch. Safety threshold breaches 20% floor.</span>
+</div>
+</div>
+</div>
+<!-- Stage 04 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-xs transition-all hover:shadow-md cursor-pointer group" onclick="toggleDetails('stage-04')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-bold shrink-0">04</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Replenishment Requisition</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">स्वयंचलित मागणी नोंदणी</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm font-semibold">Auto-Indent #REQ-ASO-1082</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10">Pharmacist indents auto-calculated (#REQ-ASO-1082) &amp; submitted to Jalgaon DHO based on historical run-rates.</p>
+<div class="hidden pl-10 pt-space-xs flex flex-col gap-space-xs" id="stage-04">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface font-label-sm font-bold">
+<span>Payload: 300 Units WHO-ORS Salt</span>
+<span class="text-primary">SHA-256 Hash Generated</span>
+</div>
+<span>Calculated automatically based on 14-day trailing consumption average across Asoda, Shirsoli, and Nashirabad sectors.</span>
+</div>
+</div>
+</div>
+<!-- Stage 05 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-xs transition-all hover:shadow-md cursor-pointer group" onclick="toggleDetails('stage-05')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-bold shrink-0">05</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">District Health Authority (DHA)</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">जिल्हा आरोग्य अधिकारी मान्यता</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm font-semibold">Signed #ALO-ASO-1082-DHO</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10">DHO reviews consumption telemetry, approves quota &amp; cryptographically signs Allocation #ALO-ASO-1082-DHO.</p>
+<div class="hidden pl-10 pt-space-xs flex flex-col gap-space-xs" id="stage-05">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface font-label-sm font-bold">
+<span>Authority: Dr. R. K. Patil (DHO Jalgaon)</span>
+<span class="text-primary">e-Sign Approved</span>
+</div>
+<span>Digital authority token minted. Quota validated against National Health Mission District allocation parameters.</span>
+</div>
+</div>
+</div>
+<!-- Stage 06 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-xs transition-all hover:shadow-md cursor-pointer group" onclick="toggleDetails('stage-06')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-bold shrink-0">06</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Supply Chain &amp; Regional Depot</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">विभागीय औषध कोठार पूर्तता</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm font-semibold">FEFO Lot Pick</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10">Allocation fulfillment, FEFO lot picking (Haffkine Bio-Pharma), packaging seal &amp; gate outward generation.</p>
+<div class="hidden pl-10 pt-space-xs flex flex-col gap-space-xs" id="stage-06">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface font-label-sm font-bold">
+<span>Warehouse: Jalgaon Civil Depot Tier-1</span>
+<span class="text-primary">Seal #JK-9942</span>
+</div>
+<span>First-Expiry-First-Out enforcement: Lot #HF-2024-ORS expiring 11/2026 selected. Barcodes matched with state consignment invoice.</span>
+</div>
+</div>
+</div>
+<!-- Stage 07 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-xs transition-all hover:shadow-md cursor-pointer group" onclick="toggleDetails('stage-07')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-bold shrink-0">07</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Cold-Chain Active Transport</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">शीत-साखळी थेट वाहतूक</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm font-semibold">+3.4°C IoT Monitored</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10">Reefer Van #MH-19-CV-4102 in transit (+3.4°C IoT logger #DL-440), checkpoint telemetry relayed to Asoda dock.</p>
+<div class="hidden pl-10 pt-space-xs flex flex-col gap-space-xs" id="stage-07">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface font-label-sm font-bold">
+<span>GPS: NH-53 Jalgaon-Bhusawal Corridor</span>
+<span class="text-primary font-bold">ETA: 18 mins</span>
+</div>
+<span>Continuous BLE telemetry payload. Zero thermal excursions logged. Sensor reading frequency locked at 60s intervals.</span>
+</div>
+</div>
+</div>
+<!-- Stage 08 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-xs transition-all hover:shadow-md cursor-pointer group" onclick="toggleDetails('stage-08')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-bold shrink-0">08</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Facility Gate Delivery</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">प्रा. आ. केंद्र आगमन व स्वाक्षरी</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm font-semibold">Dock Arrival</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10">Consignment physically delivered to dock. Carrier handoff log digitally signed by logistics handler.</p>
+<div class="hidden pl-10 pt-space-xs flex flex-col gap-space-xs" id="stage-08">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface font-label-sm font-bold">
+<span>Location: Asoda PHC Receiving Bay</span>
+<span class="text-primary">Seal Intact</span>
+</div>
+<span>Driver tamper-evident verification completed. Time-stamped geo-coordinate fence verified at 21.054° N, 75.602° E.</span>
+</div>
+</div>
+</div>
+<!-- Stage 09 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-xs transition-all hover:shadow-md cursor-pointer group" onclick="toggleDetails('stage-09')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md font-bold shrink-0">09</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Pharmacist Inward &amp; QR Audit</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">भौतिक तपासणी व क्युआर प्रमाणीकरण</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm font-semibold">Ledger Lock</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10">Pharmacist Sunita Deshmukh performs mandatory physical audit, scans serialized carton, locks receipt into dispensary ledger.</p>
+<div class="hidden pl-10 pt-space-xs flex flex-col gap-space-xs" id="stage-09">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface font-label-sm font-bold">
+<span>Auditor: S. Deshmukh (Reg #MAH-90142)</span>
+<span class="text-primary">QR Matched</span>
+</div>
+<span>Physical count 100% congruent. Zero damaged cartons. Cryptographic block appended to local Jalgaon health ledger.</span>
+</div>
+</div>
+</div>
+<!-- Stage 10 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-md p-space-md flex flex-col gap-space-xs transition-all hover:shadow-lg cursor-pointer bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest to-primary/5" onclick="toggleDetails('stage-10')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md font-bold shrink-0">10</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Live Inventory Increment</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">थेट साठा वाढ व रुग्ण दृश्यमानता</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm font-bold animate-pulse">+300 Units</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface pl-10 font-medium">Bin stock increases (+300 pkts), replenishing safety buffer, immediately reflected in Health Worker and Patient care portals!</p>
+<div class="hidden pl-10 pt-space-xs flex flex-col gap-space-xs" id="stage-10">
+<div class="p-space-sm rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-on-surface font-label-sm font-bold">
+<span>Full Loop Completion: 2h 44m</span>
+<span class="text-primary font-bold">Consensus 100%</span>
+</div>
+<span>State synchronized across all 6 roles. Next patient visiting Asoda PHC receives live availability confirmation.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-time Flow Microchart & Simulation Indicator -->
+<div class="rounded-xl bg-surface-container-low p-space-md mb-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Network Synchronization Pulse</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">99.98% Latency &lt; 140ms</span>
+</div>
+<!-- Inline SVG Mini Network Topology Chart -->
+<div class="w-full flex items-center justify-center py-space-xs">
+<svg class="w-full h-12 text-primary" fill="none" stroke="currentColor" viewbox="0 0 340 50">
+<path d="M 10 25 L 45 25 L 80 25 L 115 25 L 150 25 L 185 25 L 220 25 L 255 25 L 290 25 L 325 25" stroke="#cee6f1" stroke-linecap="round" stroke-width="4"></path>
+<path d="M 10 25 L 45 25 L 80 25 L 115 25 L 150 25 L 185 25 L 220 25 L 255 25 L 290 25 L 325 25" stroke="#006051" stroke-dasharray="16 8" stroke-linecap="round" stroke-width="4">
+<animate attributename="stroke-dashoffset" dur="2s" from="48" repeatcount="indefinite" to="0"></animate>
+</path>
+<circle cx="10" cy="25" fill="#006051" r="5"></circle>
+<circle cx="80" cy="25" fill="#006051" r="5"></circle>
+<circle cx="150" cy="25" fill="#006051" r="5"></circle>
+<circle cx="220" cy="25" fill="#006051" r="5"></circle>
+<circle cx="290" cy="25" fill="#006051" r="5"></circle>
+<circle cx="325" cy="25" fill="#0b7b69" r="6" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm px-1">
+<span>Patient Need Trigger</span>
+<span>Logistics Chain</span>
+<span class="text-primary font-semibold">Verified Restock</span>
+</div>
+</div>
+<!-- Cross-Role RBAC Authorization & Security Boundary Matrix -->
+<div class="mb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">admin_panel_settings</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Unified RBAC Security Boundary Matrix</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">कठोर सुरक्षा धोरण</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Principle of Least Privilege enforced at hardware and cryptographic API layers.</p>
+<!-- 6 Role Boundary Cards -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- Role 1: Patient -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">person</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">1. Citizen / Patient (नागरिक / रुग्ण)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm">Tier 0</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">Permitted Scopes:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Self-profile management, appointment booking, own care history, read-only PHC medicine availability index.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-error font-bold">Hard Security Boundaries:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero access to other patient identities, inventory logs, clinical triage charts, or stock adjust commands.</span>
+</div>
+</div>
+<!-- Role 2: Health Worker (ANM/ASHA) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">health_and_safety</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">2. Health Worker / ANM / ASHA (आरोग्य सेविका)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm">Field Tier</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">Permitted Scopes:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Assigned village roster check, clinical triage entry (vitals/symptoms), doctor care coordination, read-only PHC medicine query.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-error font-bold">Hard Security Boundaries:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Strictly prohibited from dispensing statutory drugs, altering physical stock, approving requisitions, or administrative user edits.</span>
+</div>
+</div>
+<!-- Role 3: Pharmacist -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">medication</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">3. PHC Pharmacist (औषध निर्माण अधिकारी)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm">Facility Tier</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">Permitted Scopes:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Dispensary inventory custody, statutory Rule 65 dispensing, replenishment requisitioning (#REQ), delivery QR scanning and acceptance.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-error font-bold">Hard Security Boundaries:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">No cross-PHC modifications, no authority to self-approve replenishment indents, no access to system server configs.</span>
+</div>
+</div>
+<!-- Role 4: District Health Authority -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">4. District Authority / DHO (जिल्हा आरोग्य अधिकारी)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm">District Tier</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">Permitted Scopes:</span>
+<span class="font-body-sm text-body-sm text-on-surface">District-wide PHC operational telemetry, consumption analysis, requisition approval/redirection, depot allocation sign-offs.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-error font-bold">Hard Security Boundaries:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cannot dispense direct medication to citizens, cannot manually alter physical depot bin counts without warehouse custodian counter-sign.</span>
+</div>
+</div>
+<!-- Role 5: Depot Operator -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">warehouse</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">5. Supply Depot Operator (मध्यवर्ती कोठार व्यवस्थापक)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm">Logistics Tier</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">Permitted Scopes:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Allocation order picking, FEFO batch serial assignment, cold-chain sensor association, reefer fleet outward gate-pass.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-error font-bold">Hard Security Boundaries:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">No access to patient identifiable health records (EHR/PHR), cannot initiate requisitions, cannot modify approved quotas.</span>
+</div>
+</div>
+<!-- Role 6: System Administrator -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">6. System Administrator (प्रणाली नियंत्रक)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-sm">Root Admin</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">Permitted Scopes:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Identity lifecycle management, PKI certificate issuance, RBAC scoping, facility node topology mapping, audit ledger immutability monitoring.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-error font-bold">Hard Security Boundaries:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Strictly barred from entering clinical diagnosis notes, modifying live medicine inventory quantities, or approving drug dispatches.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Quality & Compliance Matrix -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md mb-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">gavel</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Global Quality &amp; Statutory Checklist</h3>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start gap-space-sm p-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Multilingual Parity (त्रिभाषिक सुसंगतता)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">English, मराठी (Marathi), and हिन्दी (Hindi) rendered with unified baseline metrics and zero layout degradation across form factors.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Mobile-First Touch Architecture</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Every button, stage card, and switcher enforces a minimum 48px bounding box suited for field health operators wearing surgical gloves.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Statutory Compliance &amp; DPDP 2023</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Aligned with the Digital Personal Data Protection Act 2023 and National Health Mission Electronic Health Record (EHR) standards.</span>
+</div>
+</div>
+</div>
+<!-- Official Statutory Callout Banner -->
+<div class="p-space-sm rounded-lg bg-surface-container text-on-surface-variant flex items-start gap-space-xs mt-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm leading-relaxed">
+<strong>Statutory Notice:</strong> Information provided through this service is for public health care navigation and logistics coordination and does not replace professional medical diagnosis or consultation. DPDP Act 2023 &amp; NHM Digital Guidelines Compliant.
+      </p>
+</div>
+</div>
+<!-- Primary and Secondary Operational CTAs -->
+<div class="flex flex-col gap-space-sm">
+<button class="w-full min-h-[48px] px-space-lg py-space-sm rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-sm shadow-md transition-all active:scale-[0.98]" onclick="runSimulation()" type="button">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+<span>Launch Interactive Cross-Role Simulation</span>
+</button>
+<div class="text-center font-label-sm text-label-sm text-primary font-medium -mt-1">
+      थेट साखळी तपासणी सुरू करा
+    </div>
+<button class="w-full min-h-[48px] px-space-lg py-space-sm rounded-full bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold flex items-center justify-center gap-space-sm shadow-sm transition-all hover:bg-surface-container-high active:scale-[0.98]" onclick="exportArchitecture()" type="button">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+<span>Export Unified System Architecture (PDF / JSON)</span>
+</button>
+</div>
+<!-- Toast Notification Container for Micro-interactions -->
+<div class="fixed bottom-20 left-4 right-4 z-50 transform translate-y-32 transition-transform duration-300 ease-in-out pointer-events-none" id="simulation-toast">
+<div class="p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-fixed text-[24px]">published_with_changes</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold" id="toast-title">Simulation Loop Engaged</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80" id="toast-desc">Verifying cryptographic hash propagation across 8 PHCs...</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleDetails(elementId) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    if (el.classList.contains('hidden')) {
+      el.classList.remove('hidden');
+    } else {
+      el.classList.add('hidden');
+    }
+  }
+
+  function runSimulation() {
+    const toast = document.getElementById('simulation-toast');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+    
+    if (!toast) return;
+
+    toastTitle.textContent = "Simulation Loop Initiated (थेट पडताळणी)";
+    toastDesc.textContent = "Validating Stage 01 through Stage 10 live ledger consensus...";
+    toast.classList.remove('translate-y-32');
+
+    // Expand all stages for delightful full inspection
+    for (let i = 1; i <= 10; i++) {
+      const id = 'stage-' + (i < 10 ? '0' + i : i);
+      const stageEl = document.getElementById(id);
+      if (stageEl) stageEl.classList.remove('hidden');
+    }
+
+    setTimeout(() => {
+      toastTitle.textContent = "All 10 Stages Validated";
+      toastDesc.textContent = "100% Zero-Latency Handshake Confirmed across Jalgaon Network.";
+      setTimeout(() => {
+        toast.classList.add('translate-y-32');
+      }, 3000);
+    }, 2000);
+  }
+
+  function exportArchitecture() {
+    const toast = document.getElementById('simulation-toast');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+    
+    if (!toast) return;
+
+    toastTitle.textContent = "Architecture Artifact Generated";
+    toastDesc.textContent = "MediFlow_Unified_Loop_Matrix_Jalgaon.json downloaded securely.";
+    toast.classList.remove('translate-y-32');
+
+    setTimeout(() => {
+      toast.classList.add('translate-y-32');
+    }, 2500);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(6,30,38,0.06)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 transition-all text-primary font-bold" data-path="loop-overview" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-[10px] mt-0.5 leading-tight">डॅशबोर्ड</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-all" data-path="roles-access" href="#"><span class="material-symbols-outlined text-[24px]">badge</span><span class="font-label-sm text-[10px] mt-0.5 leading-tight">भूमिका</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-all" data-path="system-matrix" href="#"><span class="material-symbols-outlined text-[24px]">hub</span><span class="font-label-sm text-[10px] mt-0.5 leading-tight">प्रणाली</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-all" data-path="audit-ledger" href="#"><span class="material-symbols-outlined text-[24px]">fact_check</span><span class="font-label-sm text-[10px] mt-0.5 leading-tight">लेखापरीक्षण</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-all" data-path="officer-profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-[10px] mt-0.5 leading-tight">खाते</span></a></div></nav></body></html>

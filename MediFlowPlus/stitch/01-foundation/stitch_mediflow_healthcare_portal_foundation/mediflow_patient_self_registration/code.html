@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><title>MediFlow+ Public Health Network</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "on-secondary-fixed": "#001f28", "secondary": "#47626e", "on-tertiary": "#ffffff", "error": "#ba1a1a", "on-tertiary-container": "#e7f2ff", "background": "#f2fbff", "on-primary-fixed-variant": "#005144", "secondary-fixed": "#c9e7f4", "surface-variant": "#cee6f1", "on-background": "#061e26", "on-tertiary-fixed": "#001d31", "secondary-container": "#c7e4f2", "inverse-primary": "#7bd7c1", "on-primary-fixed": "#00201a", "surface-container-highest": "#cee6f1", "outline": "#6e7a75", "surface-container-high": "#d4ecf7", "on-primary-container": "#b3ffeb", "on-error-container": "#93000a", "on-secondary-fixed-variant": "#2f4b55", "secondary-fixed-dim": "#aecbd8", "on-surface-variant": "#3e4946", "on-secondary-container": "#4b6772", "surface-container-lowest": "#ffffff", "outline-variant": "#bdc9c4", "on-surface": "#061e26", "surface-container-low": "#e4f7ff", "primary-container": "#0b7b69", "surface-tint": "#006b5b", "primary-fixed": "#98f4dd", "surface": "#f2fbff", "primary": "#006051", "surface-bright": "#f2fbff", "error-container": "#ffdad6", "tertiary": "#005a89", "tertiary-fixed": "#cce5ff", "tertiary-container": "#0073ae", "tertiary-fixed-dim": "#93ccff", "inverse-surface": "#1d333c", "on-tertiary-fixed-variant": "#004b73", "surface-dim": "#c6dee8", "on-primary": "#ffffff", "primary-fixed-dim": "#7bd7c1", "on-error": "#ffffff", "inverse-on-surface": "#ddf5ff", "surface-container": "#d9f2fd" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "margin-desktop": "2rem", "gutter-desktop": "1.5rem", "margin": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter": "1rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-lg": ["Noto Sans"], "body-md": ["Noto Sans"], "headline-lg": ["Noto Sans"], "label-sm": ["Noto Sans"], "body-lg": ["Noto Sans"], "headline-sm": ["Noto Sans"], "display-lg": ["Noto Sans"], "display-lg-mobile": ["Noto Sans"], "body-sm": ["Noto Sans"], "label-md": ["Noto Sans"], "headline-md": ["Noto Sans"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen pt-safe pb-safe selection:bg-primary-fixed selection:text-on-primary-fixed"><main class="flex flex-col relative w-full px-margin py-space-xl flex-grow bg-surface"><div class="flex flex-col w-full space-y-space-md">
+<!-- Top Utilities & Language Switcher -->
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+<span class="font-label-md text-label-md text-primary tracking-wide uppercase">MediFlow+ Citizen Care</span>
+</div>
+<!-- Segmented Multi-script Switcher -->
+<div aria-label="Language selection" class="inline-flex items-center bg-surface-container p-1 rounded-full shadow-sm" role="radiogroup">
+<button class="lang-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-sm transition-all" data-lang="en" type="button">
+        English
+      </button>
+<button class="lang-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-all hover:text-on-surface" data-lang="mr" type="button">
+        मराठी
+      </button>
+<button class="lang-btn px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-all hover:text-on-surface" data-lang="hi" type="button">
+        हिन्दी
+      </button>
+</div>
+</div>
+<!-- Screen Heading Block -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+        Public Registration • टप्पा १
+      </span>
+<span class="material-symbols-outlined text-secondary text-[22px]">verified_user</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface pt-1">
+      Citizen &amp; Patient Registration
+      <span class="block font-headline-sm text-headline-sm text-on-surface-variant">नागरिक व रुग्ण नोंदणी</span>
+</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1 leading-relaxed">
+      Create your personal account for medicine tracking, OPD tokens, and care updates across public dispensaries.
+    </p>
+</div>
+<!-- Multi-step Visual Progress Tracker -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Step 1 of 3: Personal Details</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">33% Completed</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full w-1/3 rounded-full transition-all duration-300"></div>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 text-center">
+<div class="flex flex-col items-center">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center">1</span>
+<span class="font-label-sm text-label-sm text-primary mt-1 font-semibold">Details</span>
+</div>
+<div class="flex flex-col items-center opacity-60">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Verification</span>
+</div>
+<div class="flex flex-col items-center opacity-60">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">PHC Link</span>
+</div>
+</div>
+</div>
+<!-- Primary Registration Form Card -->
+<form class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md" id="signupForm" onsubmit="event.preventDefault(); openOtpModal();">
+<!-- 1. Full Name -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="fullName">
+        Full Name / पूर्ण नाव <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">person</span>
+<input class="w-full h-12 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="fullName" placeholder="e.g. Ramesh Vithal Patil" required="" type="text"/>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">As per Aadhaar or official ration document</p>
+</div>
+<!-- 2. Mobile Number -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="mobileNumber">
+        Mobile Number / मोबाइल क्रमांक <span class="text-error">*</span>
+</label>
+<div class="flex items-center space-x-2">
+<div class="h-12 px-3 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface font-label-lg text-label-lg">
+          🇮🇳 +91
+        </div>
+<div class="relative flex-1 flex items-center">
+<input class="w-full h-12 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="mobileNumber" maxlength="10" pattern="[0-9]{10}" placeholder="98XXXXXXXX" required="" type="tel"/>
+<span class="material-symbols-outlined absolute right-3 text-secondary text-[20px]">smartphone</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">A 6-digit OTP will be dispatched for mobile confirmation</p>
+</div>
+<!-- 3. Email (Optional) -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="block font-label-md text-label-md text-on-surface" for="email">
+          Email Address / ईमेल
+        </label>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container px-2 py-0.5 rounded-full">Optional / ऐच्छिक</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">alternate_email</span>
+<input class="w-full h-12 pl-10 pr-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="email" placeholder="ramesh.patil@example.com" type="email"/>
+</div>
+</div>
+<!-- 4. DOB & Gender Pills -->
+<div class="space-y-space-sm">
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="dob">
+          Date of Birth / जन्मतारीख <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-12 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="dob" required="" type="date"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface">
+          Gender / लिंग <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-3 gap-2">
+<label class="flex items-center justify-center h-12 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md cursor-pointer transition-all hover:bg-surface-container-high has-[:checked]:bg-primary-container has-[:checked]:text-on-primary">
+<input checked="" class="sr-only" name="gender" type="radio" value="male"/>
+<span>Male / पुरुष</span>
+</label>
+<label class="flex items-center justify-center h-12 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md cursor-pointer transition-all hover:bg-surface-container-high has-[:checked]:bg-primary-container has-[:checked]:text-on-primary">
+<input class="sr-only" name="gender" type="radio" value="female"/>
+<span>Female / स्त्री</span>
+</label>
+<label class="flex items-center justify-center h-12 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md cursor-pointer transition-all hover:bg-surface-container-high has-[:checked]:bg-primary-container has-[:checked]:text-on-primary">
+<input class="sr-only" name="gender" type="radio" value="other"/>
+<span>Other / इतर</span>
+</label>
+</div>
+</div>
+</div>
+<!-- 5. Taluka & Village -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="taluka">
+        Taluka &amp; Village / तालुका व गाव <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-3 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none appearance-none shadow-inner" id="taluka" required="">
+<option disabled="" selected="" value="">Select Administrative Taluka</option>
+<option value="jalgaon">Jalgaon / जळगाव</option>
+<option value="bhusawal">Bhusawal / भुसावळ</option>
+<option value="pachora">Pachora / पाचोरा</option>
+<option value="chalisgaon">Chalisgaon / चाळीसगाव</option>
+<option value="chopda">Chopda / चोपडा</option>
+<option value="jamner">Jamner / जामनेर</option>
+<option value="amalner">Amalner / अमळनेर</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- 6. Registered / Home PHC -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="phc">
+        Registered / Home PHC / जवळचे प्राथमिक आरोग्य केंद्र <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-12 pl-3 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none appearance-none shadow-inner" id="phc" required="">
+<option disabled="" selected="" value="">Select Primary Health Centre (PHC)</option>
+<option value="asoda">Asoda PHC / असोदा प्राथमिक आरोग्य केंद्र</option>
+<option value="neri">Neri PHC / नेरी प्राथमिक आरोग्य केंद्र</option>
+<option value="nashirabad">Nashirabad PHC / नशिराबाद प्राथमिक आरोग्य केंद्र</option>
+<option value="mhasawad">Mhasawad PHC / म्हसावद प्राथमिक आरोग्य केंद्र</option>
+<option value="varangaon">Varangaon Rural Dispensary / वरणगाव ग्रामीण दवाखाना</option>
+<option value="kinod">Kinod PHC / किनोद प्राथमिक आरोग्य केंद्र</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary pointer-events-none">local_hospital</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Default dispatch node for routine refills &amp; immunization tokens</p>
+</div>
+<!-- 7. Create Password & Dynamic Strength Meter -->
+<div class="space-y-2">
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="passField">
+          Create Password / पासवर्ड तयार करा <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-12 pl-3 pr-12 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="passField" oninput="handlePasswordStrength(this.value)" placeholder="Enter secure password" required="" type="password"/>
+<button aria-label="Toggle password view" class="absolute right-2 h-10 w-10 flex items-center justify-center text-secondary rounded-full hover:bg-surface-container" onclick="togglePasswordVisibility('passField', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Real-time Strength Indicator -->
+<div class="space-y-1.5 p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Security Strength:</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary" id="strengthText">Awaiting input</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5 h-1.5">
+<div class="h-full rounded-full bg-surface-container-highest transition-colors duration-300" id="bar1"></div>
+<div class="h-full rounded-full bg-surface-container-highest transition-colors duration-300" id="bar2"></div>
+<div class="h-full rounded-full bg-surface-container-highest transition-colors duration-300" id="bar3"></div>
+</div>
+<!-- Criteria Pills -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant transition-colors" id="critChars">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span> 8+ Chars
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant transition-colors" id="critNum">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span> Number
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-on-surface-variant transition-colors" id="critSpecial">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span> Special Char (!@#)
+          </span>
+</div>
+</div>
+</div>
+<!-- 8. Confirm Password -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="confirmPass">
+        Confirm Password / पासवर्ड पुष्टी करा <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-12 pl-3 pr-12 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all shadow-inner" id="confirmPass" placeholder="Re-enter your password" required="" type="password"/>
+<button aria-label="Toggle password confirm view" class="absolute right-2 h-10 w-10 flex items-center justify-center text-secondary rounded-full hover:bg-surface-container" onclick="togglePasswordVisibility('confirmPass', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- 9. Consent Checkbox -->
+<div class="pt-1">
+<label class="flex items-start space-x-3 p-3 rounded-lg bg-surface-container cursor-pointer select-none">
+<input class="mt-1 h-5 w-5 rounded text-primary focus:ring-0 accent-primary cursor-pointer shrink-0" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface leading-snug">
+          I consent to receiving official public health communications, SMS notifications for medicine availability, and immunization schedules from the District Health Administration.
+        </span>
+</label>
+</div>
+<!-- Submit Action Button -->
+<div class="pt-2">
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center space-x-2 shadow-md hover:bg-primary-container active:scale-[0.99] transition-all" type="submit">
+<span>Proceed to Mobile Verification</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Official Account Restriction Banner -->
+<div class="rounded-xl bg-secondary-container p-space-md text-on-secondary-container shadow-sm flex items-start space-x-3">
+<span class="material-symbols-outlined text-secondary text-[24px] shrink-0 mt-0.5">policy</span>
+<div class="space-y-0.5">
+<p class="font-label-md text-label-md text-on-secondary-container font-bold">
+        Official Personnel Notice / प्रशासकीय सूचना
+      </p>
+<p class="font-body-sm text-body-sm text-on-secondary-container leading-relaxed">
+        Medical Officers, PHC Pharmacists, and Taluka Health Supervisors are provisioned via formal administrative order and departmental SSO credentials. Do not register via this citizen portal.
+      </p>
+</div>
+</div>
+<!-- Interactive OTP Bottom Sheet / Modal Dialog -->
+<div aria-labelledby="otpTitle" aria-modal="true" class="fixed inset-0 z-50 flex items-end justify-center bg-inverse-surface/50 backdrop-blur-sm hidden transition-opacity duration-300" id="otpModal" role="dialog">
+<!-- Modal Card Body -->
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-lg space-y-space-md shadow-2xl animate-in slide-in-from-bottom duration-300">
+<!-- Drag handle -->
+<div class="w-12 h-1.5 bg-surface-container-highest rounded-full mx-auto -mt-2 mb-2"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface" id="otpTitle">OTP Verification</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ओटीपी पडताळणी</p>
+</div>
+</div>
+<button aria-label="Close dialog" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" onclick="closeOtpModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg space-y-1">
+<p class="font-body-sm text-body-sm text-on-surface">
+          Enter the 6-digit authorization code dispatched to:
+        </p>
+<p class="font-label-md text-label-md text-primary font-bold">
+          +91 •••••••891
+        </p>
+</div>
+<!-- 6-digit PIN Boxes -->
+<div class="grid grid-cols-6 gap-2">
+<input autofocus="" class="otp-box h-12 text-center font-headline-md text-headline-md font-bold rounded-lg bg-surface-container-low text-on-surface focus:bg-surface-container-lowest focus:outline-none shadow-inner" inputmode="numeric" maxlength="1" type="text"/>
+<input class="otp-box h-12 text-center font-headline-md text-headline-md font-bold rounded-lg bg-surface-container-low text-on-surface focus:bg-surface-container-lowest focus:outline-none shadow-inner" inputmode="numeric" maxlength="1" type="text"/>
+<input class="otp-box h-12 text-center font-headline-md text-headline-md font-bold rounded-lg bg-surface-container-low text-on-surface focus:bg-surface-container-lowest focus:outline-none shadow-inner" inputmode="numeric" maxlength="1" type="text"/>
+<input class="otp-box h-12 text-center font-headline-md text-headline-md font-bold rounded-lg bg-surface-container-low text-on-surface focus:bg-surface-container-lowest focus:outline-none shadow-inner" inputmode="numeric" maxlength="1" type="text"/>
+<input class="otp-box h-12 text-center font-headline-md text-headline-md font-bold rounded-lg bg-surface-container-low text-on-surface focus:bg-surface-container-lowest focus:outline-none shadow-inner" inputmode="numeric" maxlength="1" type="text"/>
+<input class="otp-box h-12 text-center font-headline-md text-headline-md font-bold rounded-lg bg-surface-container-low text-on-surface focus:bg-surface-container-lowest focus:outline-none shadow-inner" inputmode="numeric" maxlength="1" type="text"/>
+</div>
+<!-- Timer & Resend Controls -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center space-x-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Resend OTP in: <span class="font-bold text-on-surface" id="otpTimer">42s</span></span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary opacity-50 cursor-not-allowed hover:text-primary transition-colors" disabled="" id="resendBtn" onclick="restartOtpTimer()" type="button">
+          Resend Code
+        </button>
+</div>
+<!-- Modal Action Buttons -->
+<div class="space-y-2 pt-2">
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center space-x-2 shadow-md hover:bg-primary-container active:scale-[0.99] transition-all" onclick="completeRegistration()" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Verify &amp; Link MediFlow+ Account</span>
+</button>
+<button class="w-full h-11 rounded-xl bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center justify-center hover:bg-surface-container-high transition-all" onclick="closeOtpModal()" type="button">
+          Edit Phone Number / मागे फिरा
+        </button>
+</div>
+<!-- Government Compliance Mark -->
+<div class="flex items-center justify-center space-x-1.5 text-on-surface-variant opacity-80 pt-1">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="font-label-sm text-label-sm">End-to-End Encrypted Health Records Gateway</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Interaction Behavior -->
+<script>
+  // Language Switcher Toggle
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.lang-btn').forEach(b => {
+        b.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        b.classList.add('text-on-surface-variant');
+      });
+      btn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      btn.classList.remove('text-on-surface-variant');
+    });
+  });
+
+  // Password Visibility Toggle
+  function togglePasswordVisibility(fieldId, triggerBtn) {
+    const field = document.getElementById(fieldId);
+    const icon = triggerBtn.querySelector('.material-symbols-outlined');
+    if (field.type === 'password') {
+      field.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      field.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  // Password Strength Evaluator
+  function handlePasswordStrength(val) {
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+    const txt = document.getElementById('strengthText');
+
+    const critChars = document.getElementById('critChars');
+    const critNum = document.getElementById('critNum');
+    const critSpecial = document.getElementById('critSpecial');
+
+    const hasLength = val.length >= 8;
+    const hasNumber = /[0-9]/.test(val);
+    const hasSpecial = /[^A-Za-z0-9]/.test(val);
+
+    // Update criteria chips
+    updateChip(critChars, hasLength);
+    updateChip(critNum, hasNumber);
+    updateChip(critSpecial, hasSpecial);
+
+    let score = 0;
+    if (hasLength) score++;
+    if (hasNumber) score++;
+    if (hasSpecial) score++;
+
+    // Reset styles
+    bar1.className = 'h-full rounded-full bg-surface-container-highest transition-colors duration-300';
+    bar2.className = 'h-full rounded-full bg-surface-container-highest transition-colors duration-300';
+    bar3.className = 'h-full rounded-full bg-surface-container-highest transition-colors duration-300';
+
+    if (val.length === 0) {
+      txt.textContent = 'Awaiting input';
+      txt.className = 'font-label-sm text-label-sm font-bold text-secondary';
+      return;
+    }
+
+    if (score === 1) {
+      bar1.classList.remove('bg-surface-container-highest');
+      bar1.classList.add('bg-error');
+      txt.textContent = 'Weak / कमकुवत';
+      txt.className = 'font-label-sm text-label-sm font-bold text-error';
+    } else if (score === 2) {
+      bar1.classList.remove('bg-surface-container-highest');
+      bar2.classList.remove('bg-surface-container-highest');
+      bar1.classList.add('bg-tertiary-container');
+      bar2.classList.add('bg-tertiary-container');
+      txt.textContent = 'Moderate / मध्यम';
+      txt.className = 'font-label-sm text-label-sm font-bold text-tertiary';
+    } else if (score === 3) {
+      bar1.classList.remove('bg-surface-container-highest');
+      bar2.classList.remove('bg-surface-container-highest');
+      bar3.classList.remove('bg-surface-container-highest');
+      bar1.classList.add('bg-primary');
+      bar2.classList.add('bg-primary');
+      bar3.classList.add('bg-primary');
+      txt.textContent = 'Strong / मजबूत';
+      txt.className = 'font-label-sm text-label-sm font-bold text-primary';
+    }
+  }
+
+  function updateChip(el, active) {
+    if (active) {
+      el.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      el.classList.add('bg-primary-container', 'text-on-primary');
+    } else {
+      el.classList.add('bg-surface-container', 'text-on-surface-variant');
+      el.classList.remove('bg-primary-container', 'text-on-primary');
+    }
+  }
+
+  // OTP Modal Controller
+  let otpInterval;
+  function openOtpModal() {
+    const modal = document.getElementById('otpModal');
+    modal.classList.remove('hidden');
+    startOtpCountdown(42);
+    setupOtpBoxes();
+  }
+
+  function closeOtpModal() {
+    const modal = document.getElementById('otpModal');
+    modal.classList.add('hidden');
+    clearInterval(otpInterval);
+  }
+
+  function startOtpCountdown(seconds) {
+    clearInterval(otpInterval);
+    let timeLeft = seconds;
+    const timerEl = document.getElementById('otpTimer');
+    const resendBtn = document.getElementById('resendBtn');
+    resendBtn.disabled = true;
+    resendBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+    otpInterval = setInterval(() => {
+      timeLeft--;
+      if (timeLeft <= 0) {
+        clearInterval(otpInterval);
+        timerEl.textContent = '00s';
+        resendBtn.disabled = false;
+        resendBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      } else {
+        timerEl.textContent = (timeLeft < 10 ? '0' : '') + timeLeft + 's';
+      }
+    }, 1000);
+  }
+
+  function restartOtpTimer() {
+    startOtpCountdown(45);
+  }
+
+  // Automatic Auto-Advance for 6 OTP Boxes
+  function setupOtpBoxes() {
+    const boxes = document.querySelectorAll('.otp-box');
+    boxes.forEach((box, idx) => {
+      box.value = '';
+      box.addEventListener('input', (e) => {
+        if (box.value.length === 1 && idx < boxes.length - 1) {
+          boxes[idx + 1].focus();
+        }
+      });
+      box.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && box.value === '' && idx > 0) {
+          boxes[idx - 1].focus();
+        }
+      });
+    });
+    if (boxes[0]) boxes[0].focus();
+  }
+
+  function completeRegistration() {
+    const btn = event.currentTarget;
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">sync</span><span>Linking PHC Record...</span>';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">verified</span><span>Account Activated!</span>';
+      setTimeout(() => {
+        closeOtpModal();
+      }, 900);
+    }, 1200);
+  }
+</script><div class="mt-auto pt-space-lg text-center"><p class="font-body-sm text-body-sm text-on-surface-variant">Information provided through this service is for care navigation and coordination and does not replace professional medical advice.</p></div></main></body></html>

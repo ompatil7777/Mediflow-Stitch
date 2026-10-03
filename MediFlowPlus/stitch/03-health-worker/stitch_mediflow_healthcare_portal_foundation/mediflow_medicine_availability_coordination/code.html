@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'surface': '#f2fbff', 'on-tertiary-container': '#e7f2ff', 'primary-fixed-dim': '#7bd7c1', 'tertiary': '#005a89', 'secondary-fixed-dim': '#aecbd8', 'on-primary-fixed': '#00201a', 'on-tertiary-fixed-variant': '#004b73', 'inverse-primary': '#7bd7c1', 'surface-container-low': '#e4f7ff', 'surface-container-high': '#d4ecf7', 'error': '#ba1a1a', 'surface-container': '#d9f2fd', 'inverse-surface': '#1d333c', 'background': '#f2fbff', 'on-secondary-fixed-variant': '#2f4b55', 'secondary': '#47626e', 'on-primary': '#ffffff', 'tertiary-container': '#0073ae', 'primary': '#006051', 'on-secondary': '#ffffff', 'primary-fixed': '#98f4dd', 'primary-container': '#0b7b69', 'inverse-on-surface': '#ddf5ff', 'on-error-container': '#93000a', 'secondary-fixed': '#c9e7f4', 'on-secondary-fixed': '#001f28', 'outline': '#6e7a75', 'tertiary-fixed': '#cce5ff', 'on-primary-container': '#b3ffeb', 'surface-tint': '#006b5b', 'on-background': '#061e26', 'outline-variant': '#bdc9c4', 'surface-variant': '#cee6f1', 'on-secondary-container': '#4b6772', 'error-container': '#ffdad6', 'on-surface-variant': '#3e4946', 'surface-container-highest': '#cee6f1', 'on-error': '#ffffff', 'on-tertiary-fixed': '#001d31', 'surface-bright': '#f2fbff', 'on-surface': '#061e26', 'surface-container-lowest': '#ffffff', 'on-primary-fixed-variant': '#005144', 'secondary-container': '#c7e4f2', 'on-tertiary': '#ffffff', 'tertiary-fixed-dim': '#93ccff', 'surface-dim': '#c6dee8' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'gutter': '1rem', 'margin': '1rem', 'space-sm': '0.5rem', 'margin-desktop': '2rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'space-xl': '2rem', 'space-md': '1rem', 'gutter-desktop': '1.5rem' }, fontFamily: { 'display-lg': ['Noto Sans'], 'body-md': ['Noto Sans'], 'label-sm': ['Noto Sans'], 'label-lg': ['Noto Sans'], 'headline-md': ['Noto Sans'], 'body-lg': ['Noto Sans'], 'headline-sm': ['Noto Sans'], 'body-sm': ['Noto Sans'], 'headline-lg': ['Noto Sans'], 'display-lg-mobile': ['Noto Sans'], 'label-md': ['Noto Sans'] }, fontSize: { 'display-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '22px', fontWeight: '400' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-md': ['20px', { lineHeight: '28px', fontWeight: '600' }], 'body-lg': ['16px', { lineHeight: '26px', fontWeight: '400' }], 'headline-sm': ['18px', { lineHeight: '26px', fontWeight: '600' }], 'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }], 'headline-lg': ['24px', { lineHeight: '32px', letterSpacing: '-0.01em', fontWeight: '600' }], 'display-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '700' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="Brand logo. - Primary color: #0b7b69 - Font: notoSans - Mode: light - Roundness: rounded-sm" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VfXbYSMuLAlFGrlisKJpDCWISyS7Eh6XQFMJE6VlXjrV4vBCiJU0c42xXk3Q1nsXaXtjUMvp0ScFvyn9oHeWih8GSr5hCJDdKIo0oigqQctgUR4D2WHDrx-LdNKlyn1LWbfgGNN3cu-Cm65XKvJyegzrf31XM5uG7NiDWdUf8cKlOctXQiGbM2NFPO-dL_PnpfsN2QGmMFxQjTpJA8LojLrc_OkOsrh_wRjPg6CWHAo41vu2vY80no"/><div class="flex flex-col min-w-0 justify-center"><div class="flex items-center gap-space-xs"><span class="font-label-lg text-label-lg font-bold text-on-surface truncate">MediFlow+</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed shrink-0 hidden xs:inline-block">Jalgaon PHC</span></div><div class="flex items-center gap-1"><span class="font-label-sm text-label-sm text-primary-container truncate font-semibold">ASO-PHC • Medicines</span><span class="font-label-sm text-label-sm px-1 py-0.2 rounded bg-primary/10 text-primary uppercase font-bold shrink-0 text-[10px] leading-tight">HW / सेवक</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="flex items-center bg-surface-container-low p-0.5 rounded-full text-on-secondary-container"><button aria-label="Switch language to English" class="min-h-[44px] min-w-[44px] px-2 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-primary font-bold shadow-[0_1px_3px_rgba(15,45,55,0.05)] flex items-center justify-center" type="button">EN</button><button aria-label="मराठी भाषा निवडा" class="min-h-[44px] min-w-[44px] px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center justify-center" type="button">मरा</button><button aria-label="हिन्दी भाषा चुनें" class="min-h-[44px] min-w-[44px] px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface flex items-center justify-center" type="button">हिं</button></div><button aria-label="View notifications" class="min-h-[44px] min-w-[44px] relative flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-error px-1 font-label-sm text-[10px] text-on-error font-bold leading-none">3</span></button><div class="flex items-center gap-1 pl-1 shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm"><span class="material-symbols-outlined text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-sm text-label-sm font-bold text-on-surface leading-tight">S. Patil</span><span class="font-label-sm text-label-sm text-outline leading-tight text-[10px]">ANM-001</span></div></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin space-y-space-md">
+<!-- Operational Context Card -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="space-y-0.5 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            नोड #ASO-04
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            EDL 2024 V3.2
+          </span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">
+          Asoda PHC Dispensary Stock
+        </h1>
+<p class="font-body-sm text-body-sm text-secondary font-medium">
+          प्रा.आ. केंद्र असोदा • औषध साठा तपासणी व समन्वय कक्ष
+        </p>
+</div>
+<button aria-label="Call Counter 1 Pharmacist" class="shrink-0 flex items-center justify-center w-11 h-11 rounded-full bg-primary-container text-on-primary shadow-sm hover:opacity-95 active:scale-95 transition-transform" id="callDutyPharmacistBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+</div>
+<!-- Active Pharmacist Handshake Strip -->
+<div class="grid grid-cols-1 gap-2 pt-space-xs">
+<div class="flex items-center justify-between bg-surface-container-low rounded-lg p-2.5">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="relative w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">
+              Sunita Deshmukh <span class="text-secondary font-normal">(सुनिता देशमुख)</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline truncate">
+              कर्तव्यस्थ औषधपाल • PHARM-ASO-001 (Counter #1)
+            </span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+            थेट स्थिती
+          </span>
+<span class="font-label-sm text-[10px] text-outline">
+            ३ मिनिटांपूर्वी समक्रमित
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Stock Inquiry Action Shortcuts -->
+<section class="w-full">
+<div class="flex items-center justify-between mb-space-xs px-1">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">
+        Quick Actions • त्वरित समन्वय
+      </span>
+<span class="font-label-sm text-label-sm text-outline">
+        आरोग्य सेवक कक्ष
+      </span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="flex flex-col items-center justify-center p-2.5 bg-surface-container-lowest rounded-xl shadow-sm text-center hover:bg-surface-container-low transition-colors" onclick="triggerCoordination('camp')" type="button">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container mb-1.5">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight line-clamp-2">
+          Field Camp<br/><span class="text-[10px] font-normal text-secondary">शिबिर साठा</span>
+</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2.5 bg-surface-container-lowest rounded-xl shadow-sm text-center hover:bg-surface-container-low transition-colors" onclick="triggerCoordination('special')" type="button">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-1.5">
+<span class="material-symbols-outlined text-[18px]">person_alert</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight line-clamp-2">
+          Special Refill<br/><span class="text-[10px] font-normal text-secondary">रुग्ण मागणी</span>
+</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2.5 bg-surface-container-lowest rounded-xl shadow-sm text-center hover:bg-surface-container-low transition-colors" onclick="triggerCoordination('buffer')" type="button">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant mb-1.5">
+<span class="material-symbols-outlined text-[18px]">low_priority</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight line-clamp-2">
+          Subcenter Buffer<br/><span class="text-[10px] font-normal text-secondary">उपकेंद्र नोंद</span>
+</span>
+</button>
+</div>
+</section>
+<!-- Search & EDL Filter Segment -->
+<section class="w-full space-y-space-sm">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-secondary">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-12 pl-10 pr-10 bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md font-body-md rounded-xl shadow-sm focus:outline-none focus:bg-surface-container-lowest transition-all" id="medicineSearchInput" placeholder="Search drug or salt (उदा. Paracetamol, Metformin)..." type="text"/>
+<button aria-label="Clear Search" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-on-surface" id="clearSearchBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Filter Pills (Horizontal Scroll) -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-nowrap">
+<button class="filter-tab active-tab px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary font-bold shadow-sm transition-all shrink-0" data-filter="all" type="button">
+        All EDL (145) • सर्व
+      </button>
+<button class="filter-tab px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-secondary font-medium shadow-sm hover:bg-surface-container-low transition-all shrink-0" data-filter="available" type="button">
+        Available (138) • उपलब्ध
+      </button>
+<button class="filter-tab px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-secondary font-medium shadow-sm hover:bg-surface-container-low transition-all shrink-0" data-filter="limited" type="button">
+        Limited (4) • मर्यादित
+      </button>
+<button class="filter-tab px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-secondary font-medium shadow-sm hover:bg-surface-container-low transition-all shrink-0" data-filter="transit" type="button">
+        Transit (3) • मार्गस्थ
+      </button>
+</div>
+</section>
+<!-- Drug Stock Catalog -->
+<section class="w-full space-y-space-sm pb-2" id="drugCardsContainer">
+<!-- Drug 1: Metformin 500mg -->
+<article class="drug-item w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md" data-name="metformin 500mg diabetes मधुमेह" data-status="available">
+<div class="flex items-start justify-between gap-space-sm mb-2">
+<div class="space-y-0.5 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">
+              Metformin 500mg
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+              उपलब्ध • AVAILABLE
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">
+            मेटफॉर्मिन गोळ्या ५०० मि.ग्रॅ. • NCD - Diabetes Formulary
+          </p>
+</div>
+<div class="text-right shrink-0">
+<span class="block font-headline-md text-headline-md font-bold text-primary leading-tight">
+            840
+          </span>
+<span class="font-label-sm text-[10px] text-outline font-semibold uppercase">
+            Tablets in Bin
+          </span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 space-y-1.5 mb-3">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">shelves</span>
+            Location / जागा
+          </span>
+<span class="text-on-surface font-semibold">Rack B-03 • Dispensary Counter #1</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+            Dispense Rule / वितरण नियम
+          </span>
+<span class="text-on-surface font-medium truncate max-w-[210px] text-right">Against Medical Officer Rx</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-0.5">
+<span class="text-outline text-label-sm">Batch: MFT-24-118 (Exp: 10/2026)</span>
+<span class="text-primary font-label-sm font-semibold">QC Tested Verified</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-1">
+<span class="font-label-sm text-[11px] text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>
+          Field Refill Permitted (कॅम्प वाटप अनुज्ञेय)
+        </span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-colors" onclick="openCoordinationModal('Metformin 500mg', 'Dispensing Routine Check', '840')" type="button">
+          Coordinate • समन्वय
+        </button>
+</div>
+</article>
+<!-- Drug 2: Amlodipine 5mg -->
+<article class="drug-item w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md" data-name="amlodipine 5mg hypertension उच्च रक्तदाब ncd" data-status="available">
+<div class="flex items-start justify-between gap-space-sm mb-2">
+<div class="space-y-0.5 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">
+              Amlodipine 5mg
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+              उपलब्ध • AVAILABLE
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">
+            अ‍ॅम्लोडिपिन ५ मि.ग्रॅ. • Hypertension &amp; Heart Health
+          </p>
+</div>
+<div class="text-right shrink-0">
+<span class="block font-headline-md text-headline-md font-bold text-primary leading-tight">
+            620
+          </span>
+<span class="font-label-sm text-[10px] text-outline font-semibold uppercase">
+            Tablets in Bin
+          </span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 space-y-1.5 mb-3">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">shelves</span>
+            Location / जागा
+          </span>
+<span class="text-on-surface font-semibold">Rack A-12 • Dispensary Counter #1</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">assignment_turned_in</span>
+            Monthly Reserve Buffer
+          </span>
+<span class="text-on-surface font-medium">Healthy (28 days left)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm pt-0.5">
+<span class="text-outline text-label-sm">Batch: AML-88-024 (Exp: 04/2027)</span>
+<span class="text-primary font-label-sm font-semibold">Safe Storage (22°C)</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-1">
+<span class="font-label-sm text-[11px] text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>
+          NCD Weekly Dispensary Active
+        </span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-colors" onclick="openCoordinationModal('Amlodipine 5mg', 'Routine Monthly Quota', '620')" type="button">
+          Coordinate • समन्वय
+        </button>
+</div>
+</article>
+<!-- Drug 3: ORS Packets (Zinc Enriched) - Limited Stock Alert -->
+<article class="drug-item w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md" data-name="ors packets oral rehydration salts zinc जुलाब डिहायड्रेशन बाल आरोग्य" data-status="limited">
+<div class="flex items-start justify-between gap-space-sm mb-2">
+<div class="space-y-0.5 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">
+              ORS Packets (Zinc Enriched)
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+              मर्यादित • LIMITED
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">
+            ओ.आर.एस. पावडर पाकिटे (झिंकयुक्त) • MCH Pediatric Care
+          </p>
+</div>
+<div class="text-right shrink-0">
+<span class="block font-headline-md text-headline-md font-bold text-error leading-tight">
+            45
+          </span>
+<span class="font-label-sm text-[10px] text-error font-semibold uppercase">
+            Packets Left
+          </span>
+</div>
+</div>
+<!-- Alert callout strip -->
+<div class="bg-surface-container rounded-lg p-2.5 mb-3 space-y-1.5">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-error">warning</span>
+<span class="font-label-sm text-label-sm font-bold">
+            Reorder Threshold Reached (किमान मर्यादा ओलांडली)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Buffer below 50 pkts due to weekly Anganwadi diarrhea prevention distribution. Next PHC indent pending dispatch approval.
+        </p>
+<div class="flex items-center justify-between pt-1 text-label-sm font-label-sm">
+<span class="text-outline">Main Store Rack: S-02</span>
+<span class="text-error font-bold">Threshold: 100 units</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-2 pt-1">
+<span class="font-label-sm text-[11px] text-outline truncate">
+          Dispensary priority: Urgent Pediatric only
+        </span>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-bold hover:opacity-90 flex items-center gap-1 shrink-0" onclick="openCoordinationModal('ORS Packets (Zinc Enriched)', 'Critical Low Stock Priority Request', '45 pkts')" type="button">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+          Notify Pharmacist • कळवा
+        </button>
+</div>
+</article>
+<!-- Drug 4: Rabies Vaccine Vial - Transit Replenishment -->
+<article class="drug-item w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md" data-name="rabies vaccine vial arve रेबीज लस कुत्रा चावणे cold chain" data-status="transit">
+<div class="flex items-start justify-between gap-space-sm mb-2">
+<div class="space-y-0.5 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">
+              Rabies Vaccine Vial (ARV)
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+              साठा मार्गस्थ • IN-TRANSIT
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium">
+            अ‍ॅन्टी-रेबीज लस व्हायल • Emergency Cold-Chain Supply
+          </p>
+</div>
+<div class="text-right shrink-0">
+<span class="block font-headline-md text-headline-md font-bold text-tertiary leading-tight">
+            +400
+          </span>
+<span class="font-label-sm text-[10px] text-outline font-semibold uppercase">
+            Vials En Route
+          </span>
+</div>
+</div>
+<!-- Cold-chain telemetry strip -->
+<div class="bg-surface-container-low rounded-lg p-2.5 space-y-2 mb-3">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[17px] text-tertiary">local_shipping</span>
+<span class="font-semibold">Reefer Van #MH-19-CV-4102</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-tertiary px-2 py-0.5 rounded bg-tertiary/10">
+            ETA: 42 mins (४२ मि.)
+          </span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-1.5 rounded-full" style="width: 78%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-secondary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">ac_unit</span>
+            Live Temp: +3.8°C (Range +2°C to +8°C)
+          </span>
+<span class="text-outline">From: Jalgaon District Depot</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-2 pt-1">
+<span class="font-label-sm text-[11px] text-outline">
+          Emergency reserve available at counter: <strong>3 doses</strong>
+</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-colors" onclick="openCoordinationModal('Rabies Vaccine Vial', 'Transit Arrival Readiness Request', '3 local / 400 transit')" type="button">
+          Track Delivery • मागोवा
+        </button>
+</div>
+</article>
+</section>
+<!-- Empty Search Result State -->
+<div class="hidden w-full bg-surface-container-lowest rounded-xl p-space-lg text-center shadow-sm" id="noResultsState">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mx-auto mb-2 text-secondary">
+<span class="material-symbols-outlined text-[24px]">search_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1">
+      औषध सापडले नाही (Medicine Not Found)
+    </h3>
+<p class="font-body-sm text-body-sm text-secondary max-w-xs mx-auto mb-3">
+      The entered brand or generic salt is not in Asoda PHC's immediate formulary list. Please verify spellings or notify the duty pharmacist.
+    </p>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold" onclick="resetSearch()" type="button">
+      Reset Search Filter • फिल्टर रीसेट करा
+    </button>
+</div>
+<!-- Direct Pharmacist Desk Contact Banner -->
+<section class="w-full bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<div class="min-w-0 flex-1">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-tight">
+          Dispensary Helpdesk (औषध वितरण कक्ष)
+        </h2>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+          Dial Intercom: <strong>Ext 104</strong> • Counter #1 Direct Line
+        </p>
+</div>
+<a class="px-3 py-2 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm hover:bg-surface-container transition-colors shrink-0" href="tel:02572230104">
+        कॉल करा
+      </a>
+</div>
+</section>
+<!-- Role Boundary & Clinical Safety Notice -->
+<section class="w-full bg-surface-container-highest/60 rounded-xl p-space-md">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div class="space-y-1">
+<p class="font-label-md text-label-md font-bold text-on-surface-variant">
+          Role Boundary Notice • कायदेशीर कार्यमर्यादा सूचना
+        </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Health Workers and ANM/ASHA staff have <strong>read-only visibility</strong> into live PHC dispensary stores. Stock ledger adjustments, bin transfers, subcenter indents, and expiry discards are strictly performed by the licensed Pharmacist (औषध निर्माण अधिकारी) under Maharashtra Health Services Protocol.
+        </p>
+<p class="font-label-sm text-[11px] text-outline pt-1">
+          Government of Maharashtra Public Health Department • ASO-PHC IMS-2.1
+        </p>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Slide-Up / Coordination Request Modal Sheet -->
+<div class="hidden fixed inset-0 z-50 flex items-end justify-center bg-inverse-surface/40 backdrop-blur-sm p-0 transition-opacity" id="coordinationModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-md shadow-2xl flex flex-col max-h-[85vh] overflow-y-auto">
+<!-- Modal Drag Handle & Header -->
+<div class="w-12 h-1.5 bg-outline-variant rounded-full mx-auto mb-3 shrink-0"></div>
+<div class="flex items-start justify-between mb-space-sm pb-2">
+<div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+          औषधपाल समन्वय संदेश
+        </span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1" id="modalTitle">
+          Pharmacist Coordination Note
+        </h3>
+<p class="font-body-sm text-body-sm text-secondary" id="modalSubtitle">
+          Target Drug: Metformin 500mg
+        </p>
+</div>
+<button aria-label="Close coordination form" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="closeCoordinationModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Modal Form Body -->
+<form class="space-y-space-md" id="coordinationForm" onsubmit="submitCoordination(event)">
+<!-- Current Status Snapshot -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary block">Formulary Ledger Position</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface" id="modalStockCount">Available: 840 units</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-primary/10 text-primary font-bold">
+          Verified Realtime
+        </span>
+</div>
+<!-- Request Type Selector -->
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold block">
+          Select Coordination Intent • विनंती प्रकार
+        </label>
+<div class="grid grid-cols-1 gap-2">
+<label class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 text-primary accent-primary" name="coordType" type="radio" value="camp"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Reserve for Village Outreach Camp</span>
+<span class="font-body-sm text-[12px] text-secondary">ग्रामीण आरोग्य शिबिरासाठी आवश्यक साठा राखून ठेवणे</span>
+</div>
+</label>
+<label class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary accent-primary" name="coordType" type="radio" value="special"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Special Prescription Pre-verification</span>
+<span class="font-body-sm text-[12px] text-secondary">विशिष्ट रुग्णासाठी डॉक्टरांच्या प्रिस्क्रिप्शन तपासणी</span>
+</div>
+</label>
+<label class="flex items-center gap-2.5 p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<input class="w-4 h-4 text-primary accent-primary" name="coordType" type="radio" value="alert"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Subcenter Stock Warning Notification</span>
+<span class="font-body-sm text-[12px] text-secondary">उपकेंद्र स्तरावर औषध संपल्याची पूर्वसूचना</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Quantity / Note input -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold block" for="requestNotes">
+          Specific Notes for Pharmacist • टीप / प्रमाण
+        </label>
+<textarea class="w-full p-2.5 bg-surface-container-low text-on-surface placeholder:text-outline text-body-md font-body-md rounded-lg focus:outline-none focus:bg-surface-container transition-all" id="requestNotes" placeholder="Enter estimated quantity or patient OPD token number..." rows="2"></textarea>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 min-h-[44px] rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-bold hover:bg-surface-container-high transition-colors" onclick="closeCoordinationModal()" type="button">
+          रद्द करा (Cancel)
+        </button>
+<button class="flex-1 min-h-[44px] rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-bold hover:opacity-95 transition-opacity flex items-center justify-center gap-1" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+          संदेश पाठवा (Transmit)
+        </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Simple Toast Notification Confirmation -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 hidden bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-xl shadow-lg flex items-center gap-2 max-w-sm transition-all" id="statusToast">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">समन्वय संदेश औषधपालांना पाठवला गेला.</span>
+</div>
+<script>
+  // DOM Elements
+  const searchInput = document.getElementById('medicineSearchInput');
+  const clearBtn = document.getElementById('clearSearchBtn');
+  const drugCards = document.querySelectorAll('.drug-item');
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const noResults = document.getElementById('noResultsState');
+  const coordModal = document.getElementById('coordinationModal');
+  const modalSubtitle = document.getElementById('modalSubtitle');
+  const modalStockCount = document.getElementById('modalStockCount');
+  const statusToast = document.getElementById('statusToast');
+  const toastMessage = document.getElementById('toastMessage');
+
+  let currentFilter = 'all';
+
+  // Search Logic
+  searchInput.addEventListener('input', function(e) {
+    const query = e.target.value.toLowerCase().trim();
+    if (query.length > 0) {
+      clearBtn.classList.remove('hidden');
+    } else {
+      clearBtn.classList.add('hidden');
+    }
+    applyFilters(query, currentFilter);
+  });
+
+  clearBtn.addEventListener('click', function() {
+    searchInput.value = '';
+    clearBtn.classList.add('hidden');
+    applyFilters('', currentFilter);
+    searchInput.focus();
+  });
+
+  // Filter Tabs Logic
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      filterTabs.forEach(t => {
+        t.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+        t.classList.add('bg-surface-container-lowest', 'text-secondary', 'font-medium');
+      });
+      this.classList.remove('bg-surface-container-lowest', 'text-secondary', 'font-medium');
+      this.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+
+      currentFilter = this.getAttribute('data-filter');
+      applyFilters(searchInput.value.toLowerCase().trim(), currentFilter);
+    });
+  });
+
+  function applyFilters(query, filter) {
+    let visibleCount = 0;
+
+    drugCards.forEach(card => {
+      const cardStatus = card.getAttribute('data-status');
+      const cardName = card.getAttribute('data-name');
+
+      const matchesSearch = !query || cardName.includes(query);
+      const matchesFilter = (filter === 'all') || (cardStatus === filter);
+
+      if (matchesSearch && matchesFilter) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    if (visibleCount === 0) {
+      noResults.classList.remove('hidden');
+    } else {
+      noResults.classList.add('hidden');
+    }
+  }
+
+  function resetSearch() {
+    searchInput.value = '';
+    clearBtn.classList.add('hidden');
+    filterTabs[0].click();
+  }
+
+  // Modal Open/Close
+  function openCoordinationModal(drugName, defaultReason, stockQty) {
+    modalSubtitle.innerText = `Target Item: ${drugName} • PHC Dispensary`;
+    modalStockCount.innerText = `Current Stock Level: ${stockQty}`;
+    coordModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCoordinationModal() {
+    coordModal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  // Quick Action trigger helper
+  function triggerCoordination(actionKey) {
+    let drugLabel = 'All Essential Formularies';
+    let reason = 'Outreach Camp Refill Request';
+    let stock = 'Batch Verification';
+
+    if (actionKey === 'camp') {
+      drugLabel = 'Weekly Field Outreach Kit (NCD + MCH)';
+    } else if (actionKey === 'special') {
+      drugLabel = 'Specific Antihypertensive / Diabetic Refill';
+    } else if (actionKey === 'buffer') {
+      drugLabel = 'Subcenter Buffer Depletion Alert';
+    }
+
+    openCoordinationModal(drugLabel, reason, stock);
+  }
+
+  // Submit coordination note
+  function submitCoordination(e) {
+    e.preventDefault();
+    closeCoordinationModal();
+
+    // Show confirmation Toast
+    toastMessage.innerText = 'संदेश औषधपाल सुनिता देशमुख (Counter #1) कडे नोंदवला गेला.';
+    statusToast.classList.remove('hidden');
+
+    setTimeout(() => {
+      statusToast.classList.add('hidden');
+    }, 3800);
+  }
+
+  // Phone Call Intercom shortcut
+  document.getElementById('callDutyPharmacistBtn').addEventListener('click', function() {
+    toastMessage.innerText = 'Connecting to Dispensary Counter 1 (Ext 104)...';
+    statusToast.classList.remove('hidden');
+    setTimeout(() => {
+      statusToast.classList.add('hidden');
+    }, 2500);
+  });
+
+  // Close modal when clicking outside
+  coordModal.addEventListener('click', function(e) {
+    if (e.target === coordModal) {
+      closeCoordinationModal();
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary font-bold bg-primary-fixed/20"><div class="flex justify-around items-stretch h-16 px-1"><a aria-label="Dashboard डॅशबोर्ड" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] min-w-[44px] rounded-xl text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-[11px] leading-tight text-center truncate">डॅशबोर्ड</span></a><a aria-label="Appointments भेटी" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] min-w-[44px] rounded-xl text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="appointments" href="#"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-sm text-[11px] leading-tight text-center truncate">भेटी</span></a><a aria-label="Patients रुग्ण" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] min-w-[44px] rounded-xl text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="patients" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-[11px] leading-tight text-center truncate">रुग्ण</span></a><a aria-current="page" aria-label="Medicines औषध साठा" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] min-w-[44px] rounded-xl transition-all gap-0.5 text-primary font-bold bg-primary-fixed/20" data-path="medicines" href="#"><span class="material-symbols-outlined text-[22px]">medication</span><span class="font-label-sm text-[11px] leading-tight text-center truncate">औषधे</span></a><a aria-label="Profile प्रोफाईल" class="flex-1 flex flex-col items-center justify-center py-1 min-h-[44px] min-w-[44px] rounded-xl text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-sm text-[11px] leading-tight text-center truncate">प्रोफाईल</span></a></div></nav></body></html>

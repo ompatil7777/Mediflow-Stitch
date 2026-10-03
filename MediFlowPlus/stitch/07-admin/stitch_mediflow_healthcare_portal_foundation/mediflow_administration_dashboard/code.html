@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MediFlow+ Admin</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f2fbff;}body{overscroll-behavior:none;font-family:'Noto Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface": "#f2fbff", "on-primary": "#ffffff", "secondary-fixed": "#c9e7f4", "surface-container-highest": "#cee6f1", "surface-bright": "#f2fbff", "error-container": "#ffdad6", "secondary-fixed-dim": "#aecbd8", "inverse-primary": "#7bd7c1", "error": "#ba1a1a", "tertiary-fixed": "#cce5ff", "secondary-container": "#c7e4f2", "on-background": "#061e26", "tertiary-container": "#0073ae", "on-tertiary-fixed-variant": "#004b73", "on-secondary-fixed-variant": "#2f4b55", "on-surface": "#061e26", "background": "#f2fbff", "surface-container-high": "#d4ecf7", "outline": "#6e7a75", "on-secondary": "#ffffff", "on-tertiary-container": "#e7f2ff", "on-tertiary": "#ffffff", "on-primary-fixed": "#00201a", "tertiary-fixed-dim": "#93ccff", "inverse-on-surface": "#ddf5ff", "outline-variant": "#bdc9c4", "on-secondary-fixed": "#001f28", "on-surface-variant": "#3e4946", "primary-fixed": "#98f4dd", "on-error": "#ffffff", "surface-dim": "#c6dee8", "surface-container": "#d9f2fd", "primary": "#006051", "surface-container-lowest": "#ffffff", "surface-tint": "#006b5b", "on-secondary-container": "#4b6772", "inverse-surface": "#1d333c", "primary-fixed-dim": "#7bd7c1", "secondary": "#47626e", "surface-variant": "#cee6f1", "on-primary-fixed-variant": "#005144", "tertiary": "#005a89", "on-primary-container": "#b3ffeb", "on-tertiary-fixed": "#001d31", "primary-container": "#0b7b69", "surface-container-low": "#e4f7ff", "on-error-container": "#93000a" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-desktop": "2rem", "space-xl": "2rem", "margin": "1rem", "gutter": "1rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem" }, fontFamily: { "display-lg": ["Noto Sans"], "headline-sm": ["Noto Sans"], "body-md": ["Noto Sans"], "body-lg": ["Noto Sans"], "body-sm": ["Noto Sans"], "label-md": ["Noto Sans"], "display-lg-mobile": ["Noto Sans"], "label-lg": ["Noto Sans"], "headline-md": ["Noto Sans"], "headline-lg": ["Noto Sans"], "label-sm": ["Noto Sans"] }, fontSize: { "display-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-sm": ["18px", { lineHeight: "26px", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "display-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }] } } } };</script></head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(6,30,38,0.05)] pt-safe"><div class="h-20 px-space-md flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Brand logo. - Primary color: #0b7b69
+- Font: notoSans
+- Mode: light
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VfXbYSMuLAlFGrlisKJpDCWISyS7Eh6XQFMJE6VlXjrV4vBCiJU0c42xXk3Q1nsXaXtjUMvp0ScFvyn9oHeWih8GSr5hCJDdKIo0oigqQctgUR4D2WHDrx-LdNKlyn1LWbfgGNN3cu-Cm65XKvJyegzrf31XM5uG7NiDWdUf8cKlOctXQiGbM2NFPO-dL_PnpfsN2QGmMFxQjTpJA8LojLrc_OkOsrh_wRjPg6CWHAo41vu2vY80no"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface truncate">MediFlow+ Admin</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase shrink-0">ADM-HQ-01</span></div><span class="font-label-sm text-label-sm text-secondary truncate tracking-wider">SYSTEM GOVERNANCE • JALGAON DISTRICT IT CELL</span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="flex items-center bg-surface-container rounded-full p-0.5"><button class="min-h-[44px] px-space-xs py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-[0_1px_3px_rgba(6,30,38,0.08)] flex items-center justify-center" type="button">EN</button><button class="min-h-[44px] px-space-xs py-1 rounded-full text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center" type="button">मरा</button><button class="min-h-[44px] px-space-xs py-1 rounded-full text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center" type="button">हिं</button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_1px_3px_rgba(6,30,38,0.12)] shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-space-md py-space-sm gap-space-md">
+<!-- Header Banner / Authenticated Context Badge -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">admin_panel_settings</span>
+<span>ADM-HQ-01</span>
+</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">
+            राजेश देशमुख • CAO
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">
+          System Administration &amp; Access Governance
+        </h1>
+<p class="font-body-sm text-body-sm text-secondary">
+          Jalgaon District Health Administration • Digital Operations Command
+        </p>
+<p class="font-label-sm text-label-sm text-primary font-semibold mt-0.5">
+          जिल्हा आरोग्य प्रशासन जळगाव • डिजिटल प्रशासन नियंत्रण
+        </p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+</div>
+<!-- Facility Hierarchy Ribbon -->
+<div class="mt-space-sm pt-space-sm flex items-center gap-space-xs flex-wrap text-secondary font-label-sm text-label-sm bg-surface-container-low rounded-lg p-space-xs">
+<div class="flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-primary text-[16px]">domain</span>
+<span class="font-semibold text-on-surface">Facility Scope:</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs">8 PHC Nodes</span>
+<span>•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs">1 District Office</span>
+<span>•</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs">1 Central Depot</span>
+</div>
+</div>
+<!-- Section 1: Executive Status & Access Metrics Grid -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">badge</span>
+<span class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Access Metrics / खाते स्थिती</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">48 Registered Staff</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Metric: Active Accounts -->
+<div class="flex flex-col justify-between p-space-sm rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary">Active / सक्रिय</span>
+<span class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">42</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">91.3%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 91.3%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Operational across network</span>
+</div>
+<!-- Metric: Pending Verification -->
+<div class="flex flex-col justify-between p-space-sm rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary">Pending / प्रलंबित</span>
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[15px]">pending_actions</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg text-tertiary font-bold">4</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">In Review</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 25%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Awaiting identity check</span>
+</div>
+<!-- Metric: Suspended / Locked -->
+<div class="flex flex-col justify-between p-space-sm rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary">Locked / निलंबित</span>
+<span class="w-6 h-6 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg text-error font-bold">2</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">Flagged</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 12%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">MFA &amp; Inactivity policies</span>
+</div>
+<!-- Metric: Total Enrolled -->
+<div class="flex flex-col justify-between p-space-sm rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary">All Nodes / एकूण</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[15px]">groups</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">48</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Profiles</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">District authenticated</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Priority Administrative Action Alerts -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 px-1">
+<span class="material-symbols-outlined text-error text-[18px]">priority_high</span>
+<span class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Priority Governance Alerts / तात्काळ सूचना</span>
+</div>
+<!-- Alert Card 1: Pending Activations -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Action Required</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm">2 Pending</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Staff Activation Requests</p>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+            Chalisgaon PHC: <strong class="text-on-surface">M. K. Shinde</strong> (Pharmacist)<br/>
+            Jamner PHC: <strong class="text-on-surface">Dr. V. Patil</strong> (Clinical Officer)
+          </p>
+</div>
+</div>
+<button class="w-full min-h-[48px] py-2.5 px-space-md rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-sm transition-transform active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Review &amp; Activate / पडताळणी करा</span>
+</button>
+</div>
+<!-- Alert Card 2: Security Notice -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">gpp_bad</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-error font-bold uppercase tracking-wider">Security Exception</span>
+<span class="font-label-sm text-label-sm text-secondary">09:42 AM</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">MFA Failure &amp; Credential Expiry</p>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+            Station ID: <span class="font-semibold text-on-surface">HW-ASO-004</span> (Asoda PHC Field Terminal). Consecutive handshake timeout observed.
+          </p>
+</div>
+</div>
+<button class="w-full min-h-[48px] py-2.5 px-space-md rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 transition-transform active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">security</span>
+<span>Inspect Security Log / सुरक्षा नोंद तपासा</span>
+</button>
+</div>
+</div>
+<!-- Section 3: Connected System Role Hierarchy Card -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">account_tree</span>
+<span class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Role Hierarchy / अधिकार रचना</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">NDHM Compliant</span>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Role Row 1 -->
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">District Health Authority (DHA)</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">जिल्हा आरोग्य प्राधिकरण नियंत्रक</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">2 Official Accounts</span>
+</div>
+</div>
+<!-- Role Row 2 -->
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Central Depot Logistics</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">मध्यवर्ती औषध कोठार व्यवस्थापक</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">6 Operators</span>
+</div>
+</div>
+<!-- Role Row 3 -->
+<div class="flex flex-col gap-1.5 p-space-xs rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">home_health</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Primary Health Centre Staff</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">प्राथमिक आरोग्य केंद्र कार्यदल</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-xs">34 Active</span>
+</div>
+<!-- Sub-breakdown badges -->
+<div class="flex items-center gap-1.5 flex-wrap pl-10 text-secondary">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface">12 Pharmacists</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface">14 ANM/Field</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface">8 Medical Officers</span>
+</div>
+</div>
+<!-- Role Row 4 -->
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">System &amp; IT Governance</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">आयटी सुरक्षा व प्रणाली प्रशासक</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">6 Controllers</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Quick Administrative Actions -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 px-1">
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+<span class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Quick Actions / प्रशासकीय कृती</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Action 1: Provision Account (Primary solid button) -->
+<button class="w-full min-h-[52px] px-space-md py-3 rounded-xl bg-primary text-on-primary flex items-center justify-between shadow-md transition-transform active:scale-[0.99]" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px]">person_add</span>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold">Provision New Official Account</span>
+<span class="font-label-sm text-label-sm text-primary-fixed opacity-90">नवीन अधिकृत खाते तयार करा</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Action 2: Manage Facility Assignments -->
+<button class="w-full min-h-[48px] px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface flex items-center justify-between shadow-sm transition-transform active:scale-[0.99]" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold">Manage Facility Assignments</span>
+<span class="font-label-sm text-label-sm text-secondary">आरोग्य संस्था व केंद्र वाटप व्यवस्थापन</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+</button>
+<!-- Action 3: Security Policies & Role Matrix -->
+<button class="w-full min-h-[48px] px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface flex items-center justify-between shadow-sm transition-transform active:scale-[0.99]" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">encrypted</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold">Security Policies &amp; Role Matrix</span>
+<span class="font-label-sm text-label-sm text-secondary">सुरक्षा नियम व पदवाटप मॅट्रिक्स</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+</button>
+<!-- Action 4: System Audit Trail -->
+<button class="w-full min-h-[48px] px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface flex items-center justify-between shadow-sm transition-transform active:scale-[0.99]" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold">System Audit Trail</span>
+<span class="font-label-sm text-label-sm text-secondary">संपूर्ण डिजिटल ऑडिट नोंदी व विश्लेषण</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Section 5: Real-Time Administrative Audit Stream -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">history</span>
+<span class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Live Audit Stream / थेट ऑडिट नोंदी</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Active Sync</span>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<!-- Event 1 -->
+<div class="flex items-start gap-space-sm">
+<div class="flex flex-col items-center">
+<div class="w-7 h-7 rounded-full bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[15px]">lock_clock</span>
+</div>
+<div class="w-0.5 h-full bg-surface-container mt-1"></div>
+</div>
+<div class="flex flex-col flex-1 pb-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-bold">11:20 AM</span>
+<span class="font-label-sm text-label-sm text-secondary">Auto Trigger</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold mt-0.5">Account Suspended — PHARM-JMN-003</p>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+            Inactive 90 days threshold exceeded. System auto-locked per district security directive.
+          </p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex items-start gap-space-sm">
+<div class="flex flex-col items-center">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[15px]">assignment_ind</span>
+</div>
+<div class="w-0.5 h-full bg-surface-container mt-1"></div>
+</div>
+<div class="flex flex-col flex-1 pb-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-bold">10:45 AM</span>
+<span class="font-label-sm text-label-sm text-secondary">Admin Action</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold mt-0.5">Role Reassigned — DHA Lead</p>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+            Dr. R. S. Sonawane assigned District Health Authority Lead with primary cold-chain validation rights.
+          </p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="flex items-start gap-space-sm">
+<div class="flex flex-col items-center">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[15px]">person_check</span>
+</div>
+<div class="w-0.5 h-full bg-surface-container mt-1"></div>
+</div>
+<div class="flex flex-col flex-1 pb-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">09:15 AM</span>
+<span class="font-label-sm text-label-sm text-secondary">Provisioning</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold mt-0.5">New Account Provisioned — HW-ASO-002</p>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+            ANM Field Worker assigned to Asoda PHC. Initial biometric credential package sealed.
+          </p>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="flex items-start gap-space-sm">
+<div class="flex flex-col items-center">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[15px]">key</span>
+</div>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">08:30 AM</span>
+<span class="font-label-sm text-label-sm text-secondary">System Daemon</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold mt-0.5">Key Rotation &amp; Sync Verified</p>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+            Daily Master Key rotation verified. Encrypted SQLite replica sync verified across 8 PHC storage hubs.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 6: Governance Notice / Statutory Disclaimer -->
+<div class="rounded-xl bg-surface-container-high/60 p-space-md flex flex-col gap-2">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<span class="font-label-lg text-label-lg font-bold">Statutory Administrative Disclaimer</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+      System access is governed by National Digital Health Mission (NDHM) &amp; Digital Personal Data Protection (DPDP) Act 2023. Role modifications strictly enforce least-privilege boundary compliance. All digital signatures, login sessions, and terminal telemetry are legally auditable.
+    </p>
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm text-secondary">
+<span>शासकीय डिजिटल आरोग्य अभियान • गोपनीयता संवर्धन</span>
+<span class="font-mono">NDHM-DPDP-V2.4</span>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(6,30,38,0.06)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-primary font-label-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm text-center leading-none mt-0.5">डॅशबोर्ड</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="accounts" href="#"><span class="material-symbols-outlined text-[22px]">verified_user</span><span class="font-label-sm text-label-sm text-center leading-none mt-0.5">खाती</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="org-directory" href="#"><span class="material-symbols-outlined text-[22px]">local_hospital</span><span class="font-label-sm text-label-sm text-center leading-none mt-0.5">संस्था</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="audit-security" href="#"><span class="material-symbols-outlined text-[22px]">shield</span><span class="font-label-sm text-label-sm text-center leading-none mt-0.5">सुरक्षा</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-label-sm text-label-sm text-center leading-none mt-0.5">प्रोफाईल</span></a></div></nav></body></html>
